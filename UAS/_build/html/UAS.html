@@ -408,6 +408,11 @@ title="Print to PDF"
     </a>
    </li>
    <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#menentukan-nilai-k-terbaik-dengan-metode-elbow">
+     Menentukan Nilai K Terbaik Dengan Metode Elbow
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#inisialisasi-k-means">
      Inisialisasi K-Means
     </a>
@@ -442,6 +447,11 @@ title="Print to PDF"
    <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#id5">
      Import Library
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#membuat-document-term-matrix-dtm">
+     Membuat Document Term Matrix (DTM)
     </a>
    </li>
    <li class="toc-h2 nav-item toc-entry">
@@ -557,6 +567,11 @@ title="Print to PDF"
     </a>
    </li>
    <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#menentukan-nilai-k-terbaik-dengan-metode-elbow">
+     Menentukan Nilai K Terbaik Dengan Metode Elbow
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#inisialisasi-k-means">
      Inisialisasi K-Means
     </a>
@@ -591,6 +606,11 @@ title="Print to PDF"
    <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#id5">
      Import Library
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#membuat-document-term-matrix-dtm">
+     Membuat Document Term Matrix (DTM)
     </a>
    </li>
    <li class="toc-h2 nav-item toc-entry">
@@ -632,38 +652,38 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: Scrapy in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (2.6.1)
-Requirement already satisfied: lxml&gt;=3.5.0 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from Scrapy) (4.8.0)
-Requirement already satisfied: parsel&gt;=1.5.0 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from Scrapy) (1.6.0)
-Requirement already satisfied: pyOpenSSL&gt;=16.2.0 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from Scrapy) (22.0.0)
-Requirement already satisfied: queuelib&gt;=1.4.2 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from Scrapy) (1.6.2)
 Requirement already satisfied: protego&gt;=0.1.15 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from Scrapy) (0.2.1)
-Requirement already satisfied: Twisted&gt;=17.9.0 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from Scrapy) (22.2.0)
-Requirement already satisfied: itemloaders&gt;=1.0.1 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from Scrapy) (1.0.4)
-Requirement already satisfied: setuptools in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from Scrapy) (58.1.0)
-Requirement already satisfied: tldextract in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from Scrapy) (3.2.0)
 Requirement already satisfied: PyDispatcher&gt;=2.0.5 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from Scrapy) (2.0.5)
+Requirement already satisfied: Twisted&gt;=17.9.0 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from Scrapy) (22.2.0)
+Requirement already satisfied: queuelib&gt;=1.4.2 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from Scrapy) (1.6.2)
+Requirement already satisfied: zope.interface&gt;=4.1.3 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from Scrapy) (5.4.0)
 Requirement already satisfied: cryptography&gt;=2.0 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from Scrapy) (36.0.1)
 Requirement already satisfied: itemadapter&gt;=0.1.0 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from Scrapy) (0.4.0)
-Requirement already satisfied: zope.interface&gt;=4.1.3 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from Scrapy) (5.4.0)
-Requirement already satisfied: w3lib&gt;=1.17.0 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from Scrapy) (1.22.0)
-Requirement already satisfied: cssselect&gt;=0.9.1 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from Scrapy) (1.1.0)
+Requirement already satisfied: pyOpenSSL&gt;=16.2.0 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from Scrapy) (22.0.0)
 Requirement already satisfied: service-identity&gt;=16.0.0 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from Scrapy) (21.1.0)
+Requirement already satisfied: w3lib&gt;=1.17.0 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from Scrapy) (1.22.0)
+Requirement already satisfied: itemloaders&gt;=1.0.1 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from Scrapy) (1.0.4)
+Requirement already satisfied: tldextract in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from Scrapy) (3.2.0)
+Requirement already satisfied: lxml&gt;=3.5.0 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from Scrapy) (4.8.0)
+Requirement already satisfied: parsel&gt;=1.5.0 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from Scrapy) (1.6.0)
+Requirement already satisfied: setuptools in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from Scrapy) (58.1.0)
+Requirement already satisfied: cssselect&gt;=0.9.1 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from Scrapy) (1.1.0)
 Requirement already satisfied: cffi&gt;=1.12 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from cryptography&gt;=2.0-&gt;Scrapy) (1.15.0)
 Requirement already satisfied: jmespath&gt;=0.9.5 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from itemloaders&gt;=1.0.1-&gt;Scrapy) (0.10.0)
 Requirement already satisfied: six&gt;=1.6.0 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from parsel&gt;=1.5.0-&gt;Scrapy) (1.16.0)
-Requirement already satisfied: attrs&gt;=19.1.0 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from service-identity&gt;=16.0.0-&gt;Scrapy) (21.4.0)
-Requirement already satisfied: pyasn1-modules in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from service-identity&gt;=16.0.0-&gt;Scrapy) (0.2.8)
 Requirement already satisfied: pyasn1 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from service-identity&gt;=16.0.0-&gt;Scrapy) (0.4.8)
+Requirement already satisfied: pyasn1-modules in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from service-identity&gt;=16.0.0-&gt;Scrapy) (0.2.8)
+Requirement already satisfied: attrs&gt;=19.1.0 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from service-identity&gt;=16.0.0-&gt;Scrapy) (21.4.0)
+Requirement already satisfied: incremental&gt;=21.3.0 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from Twisted&gt;=17.9.0-&gt;Scrapy) (21.3.0)
 Requirement already satisfied: typing-extensions&gt;=3.6.5 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from Twisted&gt;=17.9.0-&gt;Scrapy) (4.1.1)
+Requirement already satisfied: Automat&gt;=0.8.0 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from Twisted&gt;=17.9.0-&gt;Scrapy) (20.2.0)
+Requirement already satisfied: twisted-iocpsupport&lt;2,&gt;=1.0.2 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from Twisted&gt;=17.9.0-&gt;Scrapy) (1.0.2)
 Requirement already satisfied: hyperlink&gt;=17.1.1 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from Twisted&gt;=17.9.0-&gt;Scrapy) (21.0.0)
 Requirement already satisfied: constantly&gt;=15.1 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from Twisted&gt;=17.9.0-&gt;Scrapy) (15.1.0)
-Requirement already satisfied: Automat&gt;=0.8.0 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from Twisted&gt;=17.9.0-&gt;Scrapy) (20.2.0)
-Requirement already satisfied: incremental&gt;=21.3.0 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from Twisted&gt;=17.9.0-&gt;Scrapy) (21.3.0)
-Requirement already satisfied: twisted-iocpsupport&lt;2,&gt;=1.0.2 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from Twisted&gt;=17.9.0-&gt;Scrapy) (1.0.2)
-Requirement already satisfied: requests&gt;=2.1.0 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from tldextract-&gt;Scrapy) (2.27.1)
-Requirement already satisfied: filelock&gt;=3.0.8 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from tldextract-&gt;Scrapy) (3.6.0)
 Requirement already satisfied: requests-file&gt;=1.4 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from tldextract-&gt;Scrapy) (1.5.1)
 Requirement already satisfied: idna in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from tldextract-&gt;Scrapy) (3.3)
+Requirement already satisfied: requests&gt;=2.1.0 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from tldextract-&gt;Scrapy) (2.27.1)
+Requirement already satisfied: filelock&gt;=3.0.8 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from tldextract-&gt;Scrapy) (3.6.0)
 Requirement already satisfied: pycparser in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from cffi&gt;=1.12-&gt;cryptography&gt;=2.0-&gt;Scrapy) (2.21)
 Requirement already satisfied: urllib3&lt;1.27,&gt;=1.21.1 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from requests&gt;=2.1.0-&gt;tldextract-&gt;Scrapy) (1.26.8)
 Requirement already satisfied: charset-normalizer~=2.0.0 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from requests&gt;=2.1.0-&gt;tldextract-&gt;Scrapy) (2.0.12)
@@ -685,10 +705,10 @@ You should consider upgrading via the &#39;C:\Users\ASUS A456UR\AppData\Local\Pr
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: nltk in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (3.7)
-Requirement already satisfied: regex&gt;=2021.8.3 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from nltk) (2022.3.15)
 Requirement already satisfied: click in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from nltk) (8.0.4)
-Requirement already satisfied: tqdm in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from nltk) (4.63.0)
 Requirement already satisfied: joblib in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from nltk) (1.1.0)
+Requirement already satisfied: tqdm in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from nltk) (4.63.0)
+Requirement already satisfied: regex&gt;=2021.8.3 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from nltk) (2022.3.15)
 Requirement already satisfied: colorama in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from click-&gt;nltk) (0.4.4)
 Note: you may need to restart the kernel to use updated packages.
 </pre></div>
@@ -719,53 +739,60 @@ You should consider upgrading via the &#39;C:\Users\ASUS A456UR\AppData\Local\Pr
 <span class="ne">----&gt; </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">nltk</span>
 <span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">re</span>
 
-<span class="n">File</span> <span class="o">~</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">Programs</span>\<span class="n">Python</span>\<span class="n">Python310</span>\<span class="n">lib</span>\<span class="n">site</span><span class="o">-</span><span class="n">packages</span>\<span class="n">nltk</span>\<span class="fm">__init__</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">179</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">    </span><span class="mi">176</span> <span class="k">else</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">177</span>     <span class="kn">from</span> <span class="nn">nltk</span> <span class="kn">import</span> <span class="n">cluster</span>
-<span class="ne">--&gt; </span><span class="mi">179</span> <span class="kn">from</span> <span class="nn">nltk.downloader</span> <span class="kn">import</span> <span class="n">download</span><span class="p">,</span> <span class="n">download_shell</span>
-<span class="g g-Whitespace">    </span><span class="mi">181</span> <span class="k">try</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">182</span>     <span class="kn">import</span> <span class="nn">tkinter</span>
+<span class="n">File</span> <span class="o">~</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">Programs</span>\<span class="n">Python</span>\<span class="n">Python310</span>\<span class="n">lib</span>\<span class="n">site</span><span class="o">-</span><span class="n">packages</span>\<span class="n">nltk</span>\<span class="fm">__init__</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">152</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">    </span><span class="mi">150</span> <span class="kn">from</span> <span class="nn">nltk.tag</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="g g-Whitespace">    </span><span class="mi">151</span> <span class="kn">from</span> <span class="nn">nltk.tokenize</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="ne">--&gt; </span><span class="mi">152</span> <span class="kn">from</span> <span class="nn">nltk.translate</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="g g-Whitespace">    </span><span class="mi">153</span> <span class="kn">from</span> <span class="nn">nltk.tree</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="g g-Whitespace">    </span><span class="mi">154</span> <span class="kn">from</span> <span class="nn">nltk.sem</span> <span class="kn">import</span> <span class="o">*</span>
 
-<span class="n">File</span> <span class="o">~</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">Programs</span>\<span class="n">Python</span>\<span class="n">Python310</span>\<span class="n">lib</span>\<span class="n">site</span><span class="o">-</span><span class="n">packages</span>\<span class="n">nltk</span>\<span class="n">downloader</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">178</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">    </span><span class="mi">176</span> <span class="n">TKINTER</span> <span class="o">=</span> <span class="kc">True</span>
-<span class="g g-Whitespace">    </span><span class="mi">177</span> <span class="kn">from</span> <span class="nn">tkinter</span> <span class="kn">import</span> <span class="n">Button</span><span class="p">,</span> <span class="n">Canvas</span><span class="p">,</span> <span class="n">Entry</span><span class="p">,</span> <span class="n">Frame</span><span class="p">,</span> <span class="n">IntVar</span><span class="p">,</span> <span class="n">Label</span><span class="p">,</span> <span class="n">Menu</span><span class="p">,</span> <span class="n">TclError</span><span class="p">,</span> <span class="n">Tk</span>
-<span class="ne">--&gt; </span><span class="mi">178</span> <span class="kn">from</span> <span class="nn">tkinter.messagebox</span> <span class="kn">import</span> <span class="n">showerror</span>
-<span class="g g-Whitespace">    </span><span class="mi">180</span> <span class="kn">from</span> <span class="nn">nltk.draw.table</span> <span class="kn">import</span> <span class="n">Table</span>
-<span class="g g-Whitespace">    </span><span class="mi">181</span> <span class="kn">from</span> <span class="nn">nltk.draw.util</span> <span class="kn">import</span> <span class="n">ShowText</span>
+<span class="n">File</span> <span class="o">~</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">Programs</span>\<span class="n">Python</span>\<span class="n">Python310</span>\<span class="n">lib</span>\<span class="n">site</span><span class="o">-</span><span class="n">packages</span>\<span class="n">nltk</span>\<span class="n">translate</span>\<span class="fm">__init__</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">24</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">     </span><span class="mi">22</span> <span class="kn">from</span> <span class="nn">nltk.translate.bleu_score</span> <span class="kn">import</span> <span class="n">sentence_bleu</span> <span class="k">as</span> <span class="n">bleu</span>
+<span class="g g-Whitespace">     </span><span class="mi">23</span> <span class="kn">from</span> <span class="nn">nltk.translate.ribes_score</span> <span class="kn">import</span> <span class="n">sentence_ribes</span> <span class="k">as</span> <span class="n">ribes</span>
+<span class="ne">---&gt; </span><span class="mi">24</span> <span class="kn">from</span> <span class="nn">nltk.translate.meteor_score</span> <span class="kn">import</span> <span class="n">meteor_score</span> <span class="k">as</span> <span class="n">meteor</span>
+<span class="g g-Whitespace">     </span><span class="mi">25</span> <span class="kn">from</span> <span class="nn">nltk.translate.metrics</span> <span class="kn">import</span> <span class="n">alignment_error_rate</span>
+<span class="g g-Whitespace">     </span><span class="mi">26</span> <span class="kn">from</span> <span class="nn">nltk.translate.stack_decoder</span> <span class="kn">import</span> <span class="n">StackDecoder</span>
 
-<span class="n">File</span> <span class="o">~</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">Programs</span>\<span class="n">Python</span>\<span class="n">Python310</span>\<span class="n">lib</span>\<span class="n">tkinter</span>\<span class="n">messagebox</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">25</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># tk common message boxes</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="c1">#</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="c1"># this module provides an interface to the native message boxes</span>
-   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">22</span> <span class="c1"># - type: dialog type; that is, which buttons to display (see below)</span>
-<span class="g g-Whitespace">     </span><span class="mi">23</span> <span class="c1">#</span>
-<span class="ne">---&gt; </span><span class="mi">25</span> <span class="kn">from</span> <span class="nn">tkinter.commondialog</span> <span class="kn">import</span> <span class="n">Dialog</span>
-<span class="g g-Whitespace">     </span><span class="mi">27</span> <span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;showinfo&quot;</span><span class="p">,</span> <span class="s2">&quot;showwarning&quot;</span><span class="p">,</span> <span class="s2">&quot;showerror&quot;</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">28</span>            <span class="s2">&quot;askquestion&quot;</span><span class="p">,</span> <span class="s2">&quot;askokcancel&quot;</span><span class="p">,</span> <span class="s2">&quot;askyesno&quot;</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">29</span>            <span class="s2">&quot;askyesnocancel&quot;</span><span class="p">,</span> <span class="s2">&quot;askretrycancel&quot;</span><span class="p">]</span>
-<span class="g g-Whitespace">     </span><span class="mi">31</span> <span class="c1">#</span>
-<span class="g g-Whitespace">     </span><span class="mi">32</span> <span class="c1"># constants</span>
-<span class="g g-Whitespace">     </span><span class="mi">33</span> 
-<span class="g g-Whitespace">     </span><span class="mi">34</span> <span class="c1"># icons</span>
+<span class="n">File</span> <span class="o">~</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">Programs</span>\<span class="n">Python</span>\<span class="n">Python310</span>\<span class="n">lib</span>\<span class="n">site</span><span class="o">-</span><span class="n">packages</span>\<span class="n">nltk</span>\<span class="n">translate</span>\<span class="n">meteor_score</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">14</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">     </span><span class="mi">11</span> <span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Callable</span><span class="p">,</span> <span class="n">Iterable</span><span class="p">,</span> <span class="n">List</span><span class="p">,</span> <span class="n">Tuple</span>
+<span class="g g-Whitespace">     </span><span class="mi">13</span> <span class="kn">from</span> <span class="nn">nltk.corpus</span> <span class="kn">import</span> <span class="n">WordNetCorpusReader</span><span class="p">,</span> <span class="n">wordnet</span>
+<span class="ne">---&gt; </span><span class="mi">14</span> <span class="kn">from</span> <span class="nn">nltk.stem.api</span> <span class="kn">import</span> <span class="n">StemmerI</span>
+<span class="g g-Whitespace">     </span><span class="mi">15</span> <span class="kn">from</span> <span class="nn">nltk.stem.porter</span> <span class="kn">import</span> <span class="n">PorterStemmer</span>
+<span class="g g-Whitespace">     </span><span class="mi">18</span> <span class="k">def</span> <span class="nf">_generate_enums</span><span class="p">(</span>
+<span class="g g-Whitespace">     </span><span class="mi">19</span>     <span class="n">hypothesis</span><span class="p">:</span> <span class="n">Iterable</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span>
+<span class="g g-Whitespace">     </span><span class="mi">20</span>     <span class="n">reference</span><span class="p">:</span> <span class="n">Iterable</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span>
+<span class="g g-Whitespace">     </span><span class="mi">21</span>     <span class="n">preprocess</span><span class="p">:</span> <span class="n">Callable</span><span class="p">[[</span><span class="nb">str</span><span class="p">],</span> <span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="nb">str</span><span class="o">.</span><span class="n">lower</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">22</span> <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="n">Tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">str</span><span class="p">]],</span> <span class="n">List</span><span class="p">[</span><span class="n">Tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">str</span><span class="p">]]]:</span>
+
+<span class="n">File</span> <span class="o">~</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">Programs</span>\<span class="n">Python</span>\<span class="n">Python310</span>\<span class="n">lib</span>\<span class="n">site</span><span class="o">-</span><span class="n">packages</span>\<span class="n">nltk</span>\<span class="n">stem</span>\<span class="fm">__init__</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">33</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">     </span><span class="mi">31</span> <span class="kn">from</span> <span class="nn">nltk.stem.regexp</span> <span class="kn">import</span> <span class="n">RegexpStemmer</span>
+<span class="g g-Whitespace">     </span><span class="mi">32</span> <span class="kn">from</span> <span class="nn">nltk.stem.rslp</span> <span class="kn">import</span> <span class="n">RSLPStemmer</span>
+<span class="ne">---&gt; </span><span class="mi">33</span> <span class="kn">from</span> <span class="nn">nltk.stem.snowball</span> <span class="kn">import</span> <span class="n">SnowballStemmer</span>
+<span class="g g-Whitespace">     </span><span class="mi">34</span> <span class="kn">from</span> <span class="nn">nltk.stem.wordnet</span> <span class="kn">import</span> <span class="n">WordNetLemmatizer</span>
+
+<span class="n">File</span> <span class="o">~</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">Programs</span>\<span class="n">Python</span>\<span class="n">Python310</span>\<span class="n">lib</span>\<span class="n">site</span><span class="o">-</span><span class="n">packages</span>\<span class="n">nltk</span>\<span class="n">stem</span>\<span class="n">snowball</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">31</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">     </span><span class="mi">29</span> <span class="kn">from</span> <span class="nn">nltk.stem</span> <span class="kn">import</span> <span class="n">porter</span>
+<span class="g g-Whitespace">     </span><span class="mi">30</span> <span class="kn">from</span> <span class="nn">nltk.stem.api</span> <span class="kn">import</span> <span class="n">StemmerI</span>
+<span class="ne">---&gt; </span><span class="mi">31</span> <span class="kn">from</span> <span class="nn">nltk.stem.util</span> <span class="kn">import</span> <span class="n">prefix_replace</span><span class="p">,</span> <span class="n">suffix_replace</span>
+<span class="g g-Whitespace">     </span><span class="mi">34</span> <span class="k">class</span> <span class="nc">SnowballStemmer</span><span class="p">(</span><span class="n">StemmerI</span><span class="p">):</span>
+<span class="g g-Whitespace">     </span><span class="mi">36</span>     <span class="sd">&quot;&quot;&quot;</span>
+<span class="g g-Whitespace">     </span><span class="mi">37</span><span class="sd">     Snowball Stemmer</span>
+<span class="g g-Whitespace">     </span><span class="mi">38</span><span class="sd"> </span>
+<span class="sd">   (...)</span>
+<span class="g g-Whitespace">     </span><span class="mi">82</span><span class="sd">                            language, a ValueError is raised.</span>
+<span class="g g-Whitespace">     </span><span class="mi">83</span><span class="sd">     &quot;&quot;&quot;</span>
 
 <span class="nn">File &lt;frozen importlib._bootstrap&gt;:1027,</span> in <span class="ni">_find_and_load</span><span class="nt">(name, import_)</span>
 
-<span class="nn">File &lt;frozen importlib._bootstrap&gt;:1002,</span> in <span class="ni">_find_and_load_unlocked</span><span class="nt">(name, import_)</span>
+<span class="nn">File &lt;frozen importlib._bootstrap&gt;:1006,</span> in <span class="ni">_find_and_load_unlocked</span><span class="nt">(name, import_)</span>
 
-<span class="nn">File &lt;frozen importlib._bootstrap&gt;:945,</span> in <span class="ni">_find_spec</span><span class="nt">(name, path, target)</span>
+<span class="nn">File &lt;frozen importlib._bootstrap&gt;:688,</span> in <span class="ni">_load_unlocked</span><span class="nt">(spec)</span>
 
-<span class="nn">File &lt;frozen importlib._bootstrap_external&gt;:1430,</span> in <span class="ni">find_spec</span><span class="nt">(cls, fullname, path, target)</span>
+<span class="nn">File &lt;frozen importlib._bootstrap_external&gt;:879,</span> in <span class="ni">exec_module</span><span class="nt">(self, module)</span>
 
-<span class="nn">File &lt;frozen importlib._bootstrap_external&gt;:1402,</span> in <span class="ni">_get_spec</span><span class="nt">(cls, fullname, path, target)</span>
+<span class="nn">File &lt;frozen importlib._bootstrap_external&gt;:975,</span> in <span class="ni">get_code</span><span class="nt">(self, fullname)</span>
 
-<span class="nn">File &lt;frozen importlib._bootstrap_external&gt;:1569,</span> in <span class="ni">find_spec</span><span class="nt">(self, fullname, target)</span>
-
-<span class="nn">File &lt;frozen importlib._bootstrap_external&gt;:1524,</span> in <span class="ni">_get_spec</span><span class="nt">(self, loader_class, fullname, path, smsl, target)</span>
-
-<span class="nn">File &lt;frozen importlib._bootstrap_external&gt;:746,</span> in <span class="ni">spec_from_file_location</span><span class="nt">(name, location, loader, submodule_search_locations)</span>
-
-<span class="nn">File &lt;frozen importlib._bootstrap_external&gt;:176,</span> in <span class="ni">_path_isabs</span><span class="nt">(path)</span>
+<span class="nn">File &lt;frozen importlib._bootstrap_external&gt;:1074,</span> in <span class="ni">get_data</span><span class="nt">(self, path)</span>
 
 <span class="ne">KeyboardInterrupt</span>: 
 </pre></div>
@@ -832,8 +859,8 @@ You should consider upgrading via the &#39;C:\Users\ASUS A456UR\AppData\Local\Pr
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: nltk in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (3.7)
 Requirement already satisfied: click in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from nltk) (8.0.4)
 Requirement already satisfied: joblib in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from nltk) (1.1.0)
-Requirement already satisfied: regex&gt;=2021.8.3 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from nltk) (2022.3.15)
 Requirement already satisfied: tqdm in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from nltk) (4.63.0)
+Requirement already satisfied: regex&gt;=2021.8.3 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from nltk) (2022.3.15)
 Requirement already satisfied: colorama in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from click-&gt;nltk) (0.4.4)
 Note: you may need to restart the kernel to use updated packages.
 </pre></div>
@@ -851,16 +878,17 @@ You should consider upgrading via the &#39;C:\Users\ASUS A456UR\AppData\Local\Pr
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: scikit-learn in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (1.1.1)
-Requirement already satisfied: joblib&gt;=1.0.0 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from scikit-learn) (1.1.0)
-Requirement already satisfied: threadpoolctl&gt;=2.0.0 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from scikit-learn) (3.1.0)
-Requirement already satisfied: scipy&gt;=1.3.2 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from scikit-learn) (1.8.0)
-Requirement already satisfied: numpy&gt;=1.17.3 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from scikit-learn) (1.22.3)
-Note: you may need to restart the kernel to use updated packages.
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: scikit-learn in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (1.1.1)Note: you may need to restart the kernel to use updated packages.
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING: You are using pip version 22.0.4; however, version 22.1.2 is available.
 You should consider upgrading via the &#39;C:\Users\ASUS A456UR\AppData\Local\Programs\Python\Python310\python.exe -m pip install --upgrade pip&#39; command.
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: threadpoolctl&gt;=2.0.0 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from scikit-learn) (3.1.0)
+Requirement already satisfied: joblib&gt;=1.0.0 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from scikit-learn) (1.1.0)
+Requirement already satisfied: numpy&gt;=1.17.3 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from scikit-learn) (1.22.3)
+Requirement already satisfied: scipy&gt;=1.3.2 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from scikit-learn) (1.8.0)
 </pre></div>
 </div>
 </div>
@@ -1002,6 +1030,756 @@ Name: Abstraksi, Length: 1019, dtype: object
 </ul>
 Untuk menggunakan Tf-IDF pada python kita bisa menggunakan TfidfVectorizer dari sklearn<div class="cell docutils container">
 <div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">vectorizer</span> <span class="o">=</span> <span class="n">TfidfVectorizer</span><span class="p">(</span><span class="n">stop_words</span><span class="o">=</span><span class="s1">&#39;english&#39;</span><span class="p">)</span>
+<span class="n">berita</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">data</span> <span class="ow">in</span> <span class="n">clearData</span><span class="p">:</span>
+    <span class="n">isi</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+    <span class="k">for</span> <span class="n">term</span> <span class="ow">in</span> <span class="n">data</span><span class="p">:</span>
+        <span class="n">isi</span> <span class="o">+=</span> <span class="n">term</span> <span class="o">+</span> <span class="s1">&#39; &#39;</span>
+    <span class="n">berita</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">isi</span><span class="p">)</span>
+<span class="n">vectorizer</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">berita</span><span class="p">)</span>
+<span class="n">vector</span> <span class="o">=</span> <span class="n">vectorizer</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">berita</span><span class="p">)</span>
+<span class="n">a</span><span class="o">=</span> <span class="n">vectorizer</span><span class="o">.</span><span class="n">get_feature_names_out</span><span class="p">()</span>
+<span class="n">count</span> <span class="o">=</span> <span class="n">vector</span><span class="o">.</span><span class="n">toarray</span><span class="p">()</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">count</span><span class="p">,</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="n">a</span><span class="p">])</span>
+
+<span class="kn">from</span> <span class="nn">sklearn.feature_extraction.text</span> <span class="kn">import</span> <span class="n">TfidfTransformer</span>
+<span class="n">tfidf</span><span class="o">=</span><span class="n">TfidfTransformer</span><span class="p">(</span><span class="n">use_idf</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">norm</span><span class="o">=</span><span class="s1">&#39;l2&#39;</span><span class="p">,</span> <span class="n">smooth_idf</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">tf</span> <span class="o">=</span> <span class="n">tfidf</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">vectorizer</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">berita</span><span class="p">))</span><span class="o">.</span><span class="n">toarray</span><span class="p">()</span>
+
+<span class="n">dfp</span> <span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">tf</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">tf</span><span class="p">[:,</span><span class="mi">1</span><span class="p">])</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="p">),</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="n">a</span><span class="p">])</span>
+<span class="n">dfp</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead tr th {
+        text-align: left;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr>
+      <th></th>
+      <th>aaa</th>
+      <th>aaaamanahsyariah</th>
+      <th>aar</th>
+      <th>abadi</th>
+      <th>abalisis</th>
+      <th>abc</th>
+      <th>abcs</th>
+      <th>abd</th>
+      <th>abdul</th>
+      <th>abdullah</th>
+      <th>...</th>
+      <th>zscore</th>
+      <th>zte</th>
+      <th>zuhri</th>
+      <th>zuhruf</th>
+      <th>zulfi</th>
+      <th>zulia</th>
+      <th>zuliana</th>
+      <th>zulkifli</th>
+      <th>zulpah</th>
+      <th>zyn</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>1015</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>1016</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>1017</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.053705</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>1018</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>1019</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+  </tbody>
+</table>
+<p>1019 rows × 6982 columns</p>
+</div></div></div>
+</div>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="k-means-clustering">
+<h1>K-Means Clustering<a class="headerlink" href="#k-means-clustering" title="Permalink to this headline">#</a></h1>
+<p>K-Means Clustering adalah suatu metode penganalisaan data atau metode Data Mining yang melakukan proses pemodelan unssupervised learning dan menggunakan metode yang mengelompokan data berbagai partisi. Algoritma untuk melakukan K-Means clustering adalah sebagai berikut:</p>
+<ol>
+    <li>Pilih K buah titik centroid secara acak</li>
+    <li>Kelompokkan data sehingga terbentuk K buah cluster dengan titik centroid dari setiap cluster merupakan titik centroid yang telah dipilih sebelumnya</li>
+    <li>Perbaharui nilai titik centroid</li>
+    <li>Ulangi langkah 2 dan 3 sampai nilai dari titik centroid tidak lagi berubah</li>
+</ol><section id="instal-library">
+<h2>Instal Library<a class="headerlink" href="#instal-library" title="Permalink to this headline">#</a></h2>
+<p>Sebelum memasuki koding kita perlu menginstall beberapa library seperti : scikit-learn, numpy, seaborn, matplotlib</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">U</span> <span class="n">scikit</span><span class="o">-</span><span class="n">learn</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: scikit-learn in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (1.1.1)
+Requirement already satisfied: threadpoolctl&gt;=2.0.0 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from scikit-learn) (3.1.0)
+Requirement already satisfied: scipy&gt;=1.3.2 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from scikit-learn) (1.8.0)
+Requirement already satisfied: joblib&gt;=1.0.0 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from scikit-learn) (1.1.0)
+Requirement already satisfied: numpy&gt;=1.17.3 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from scikit-learn) (1.22.3)
+Note: you may need to restart the kernel to use updated packages.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING: You are using pip version 22.0.4; however, version 22.1.2 is available.
+You should consider upgrading via the &#39;C:\Users\ASUS A456UR\AppData\Local\Programs\Python\Python310\python.exe -m pip install --upgrade pip&#39; command.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">numpy</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: numpy in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (1.22.3)
+Note: you may need to restart the kernel to use updated packages.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING: You are using pip version 22.0.4; however, version 22.1.2 is available.
+You should consider upgrading via the &#39;C:\Users\ASUS A456UR\AppData\Local\Programs\Python\Python310\python.exe -m pip install --upgrade pip&#39; command.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">seaborn</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: seaborn in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (0.11.2)Note: you may need to restart the kernel to use updated packages.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING: You are using pip version 22.0.4; however, version 22.1.2 is available.
+You should consider upgrading via the &#39;C:\Users\ASUS A456UR\AppData\Local\Programs\Python\Python310\python.exe -m pip install --upgrade pip&#39; command.
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: numpy&gt;=1.15 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from seaborn) (1.22.3)
+Requirement already satisfied: pandas&gt;=0.23 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from seaborn) (1.4.1)
+Requirement already satisfied: matplotlib&gt;=2.2 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from seaborn) (3.5.2)
+Requirement already satisfied: scipy&gt;=1.0 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from seaborn) (1.8.0)
+Requirement already satisfied: kiwisolver&gt;=1.0.1 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from matplotlib&gt;=2.2-&gt;seaborn) (1.4.2)
+Requirement already satisfied: pyparsing&gt;=2.2.1 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from matplotlib&gt;=2.2-&gt;seaborn) (3.0.7)
+Requirement already satisfied: packaging&gt;=20.0 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from matplotlib&gt;=2.2-&gt;seaborn) (21.3)
+Requirement already satisfied: cycler&gt;=0.10 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from matplotlib&gt;=2.2-&gt;seaborn) (0.11.0)
+Requirement already satisfied: python-dateutil&gt;=2.7 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from matplotlib&gt;=2.2-&gt;seaborn) (2.8.2)
+Requirement already satisfied: pillow&gt;=6.2.0 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from matplotlib&gt;=2.2-&gt;seaborn) (9.0.1)
+Requirement already satisfied: fonttools&gt;=4.22.0 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from matplotlib&gt;=2.2-&gt;seaborn) (4.31.2)
+Requirement already satisfied: pytz&gt;=2020.1 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from pandas&gt;=0.23-&gt;seaborn) (2021.3)
+Requirement already satisfied: six&gt;=1.5 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from python-dateutil&gt;=2.7-&gt;matplotlib&gt;=2.2-&gt;seaborn) (1.16.0)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">matplotlib</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: matplotlib in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (3.5.2)
+Requirement already satisfied: fonttools&gt;=4.22.0 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from matplotlib) (4.31.2)
+Requirement already satisfied: pyparsing&gt;=2.2.1 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from matplotlib) (3.0.7)
+Requirement already satisfied: cycler&gt;=0.10 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from matplotlib) (0.11.0)
+Requirement already satisfied: pillow&gt;=6.2.0 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from matplotlib) (9.0.1)
+Requirement already satisfied: numpy&gt;=1.17 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from matplotlib) (1.22.3)
+Requirement already satisfied: packaging&gt;=20.0 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from matplotlib) (21.3)
+Requirement already satisfied: kiwisolver&gt;=1.0.1 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from matplotlib) (1.4.2)
+Requirement already satisfied: python-dateutil&gt;=2.7 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from matplotlib) (2.8.2)
+Requirement already satisfied: six&gt;=1.5 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from python-dateutil&gt;=2.7-&gt;matplotlib) (1.16.0)
+Note: you may need to restart the kernel to use updated packages.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING: You are using pip version 22.0.4; however, version 22.1.2 is available.
+You should consider upgrading via the &#39;C:\Users\ASUS A456UR\AppData\Local\Programs\Python\Python310\python.exe -m pip install --upgrade pip&#39; command.
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id3">
+<h2>Import Library<a class="headerlink" href="#id3" title="Permalink to this headline">#</a></h2>
+<p>Import library yang dibutuhkan seperti, KMean dari sklearn.cluster, PCA dari sklearn.decomposition, numpy, seaborn</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.cluster</span> <span class="kn">import</span> <span class="n">KMeans</span>
+<span class="kn">from</span> <span class="nn">sklearn.decomposition</span> <span class="kn">import</span> <span class="n">PCA</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="menentukan-nilai-k-terbaik-dengan-metode-elbow">
+<h2>Menentukan Nilai K Terbaik Dengan Metode Elbow<a class="headerlink" href="#menentukan-nilai-k-terbaik-dengan-metode-elbow" title="Permalink to this headline">#</a></h2>
+<p>Langkah awal untuk memulai KMeans adalah dengan menentukan berapa banyak cluster yang mau ditentukan, untuk mencari cluster berapa banyak cluster yang tepat bisa menggunakan metode elbow. Metode Elbow sendiri merupakan salah satu metode untuk menentukan jumlah cluster yang tepat pada K-Means melalui persentase hasil perbandingan antara jumlah cluster yang akan membentuk siku siku pada suatu titik cluster yang tepat. Untuk mencari Elbow bisa menggunakan looping dengan ketentuan cluster pada insialisasi KMeans bernilai iterasi loopingnya, berikut adalah code dan visualisasi elbownya</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">distortions</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">K</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">K</span><span class="p">:</span>
+    <span class="n">kmeanModel</span> <span class="o">=</span> <span class="n">KMeans</span><span class="p">(</span><span class="n">n_clusters</span><span class="o">=</span><span class="n">k</span><span class="p">)</span>
+    <span class="n">kmeanModel</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">df_pca</span><span class="p">)</span>
+    <span class="n">distortions</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">kmeanModel</span><span class="o">.</span><span class="n">inertia_</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">K</span><span class="p">,</span> <span class="n">distortions</span><span class="p">,</span> <span class="s1">&#39;bx-&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;k&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Distortion&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Nilai k yang paling optimal adalah&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/UAS_55_0.png" src="_images/UAS_55_0.png" />
+</div>
+</div>
+<p>Dapat dilihat bahwa K yang membentuk siku adalah K yang kelima maka nanti pada implementasi K-Means akan menggunakan 5 cluster</p>
+</section>
+<section id="inisialisasi-k-means">
+<h2>Inisialisasi K-Means<a class="headerlink" href="#inisialisasi-k-means" title="Permalink to this headline">#</a></h2>
+<p>Sesudah import library, selanjutnya inisasi KMean dengan 3 centroid atau cluster sesuai dengan hasil metode elbow. Kemudian fit dengan vector dari tfidf</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">kmeans</span> <span class="o">=</span> <span class="n">KMeans</span><span class="p">(</span><span class="n">n_clusters</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+<span class="c1"># fit the model</span>
+<span class="n">kmeans</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">dfp</span><span class="p">)</span>
+<span class="n">clusters</span> <span class="o">=</span> <span class="n">kmeans</span><span class="o">.</span><span class="n">labels_</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="reduksi-dimensi">
+<h2>Reduksi Dimensi<a class="headerlink" href="#reduksi-dimensi" title="Permalink to this headline">#</a></h2>
+<p>Untuk melakukan reduksi dimensi kita bisa menggunakan teknik Principal Component Analysis (PCA), dimana PCA akan mengurangi dimensi kumpulan data menjadi angka arbitrary sambil mempertahankan informasi yang ada pada data. Sederhananya PCA akan cenderung mempertahankan dimensi yang paling baik, dengan menghapus dimensi yang kontribusinya sedikit pada dimensi terakhir</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pca</span> <span class="o">=</span> <span class="n">PCA</span><span class="p">(</span><span class="n">n_components</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+<span class="n">pca_vecs</span> <span class="o">=</span> <span class="n">pca</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">vect_text</span><span class="o">.</span><span class="n">toarray</span><span class="p">())</span>
+<span class="n">x0</span> <span class="o">=</span> <span class="n">pca_vecs</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span>
+<span class="n">x1</span> <span class="o">=</span> <span class="n">pca_vecs</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x0</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[ 0.1154748  -0.03010483 -0.03827888 ... -0.1367186  -0.15530668
+ -0.14450373]
+[ 0.0473269   0.11785696  0.09614429 ... -0.07814701 -0.11722571
+ -0.08843261]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Pada code di atas pertama kita inisalisasi PCA dahulu dengan 2 komponen, kemudian set PCA dengan vector dari tfidf dan disimpan vector yang direduksi pada variabel pca_vecs. Kemudian simpan 2 dimensi tadi kepada variabel x0 dan x1. elanjutnya kita tambahkan kolom cluster, x0, dan x1 pada dataframe jurnal kita</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">jurnal</span><span class="p">[</span><span class="s1">&#39;cluster&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">clusters</span>
+<span class="n">jurnal</span><span class="p">[</span><span class="s1">&#39;x0&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">x0</span>
+<span class="n">jurnal</span><span class="p">[</span><span class="s1">&#39;x1&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">x1</span>
+<span class="n">jurnal</span><span class="p">[[</span><span class="s1">&#39;Abstraksi&#39;</span><span class="p">,</span><span class="s1">&#39;cluster&#39;</span><span class="p">,</span><span class="s1">&#39;x0&#39;</span><span class="p">,</span><span class="s1">&#39;x1&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Abstraksi</th>
+      <th>cluster</th>
+      <th>x0</th>
+      <th>x1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Abstrak\r\nPenelitian ini menggunakan metode k...</td>
+      <td>4</td>
+      <td>0.115475</td>
+      <td>0.047327</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Aplikasi nyata pemanfaatan teknologi informasi...</td>
+      <td>3</td>
+      <td>-0.030105</td>
+      <td>0.117857</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Tujuan penelitian ini adalah untuk mengidentif...</td>
+      <td>3</td>
+      <td>-0.038279</td>
+      <td>0.096144</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>PLN merupakan Badan Usaha Milik Negara yang be...</td>
+      <td>4</td>
+      <td>0.163460</td>
+      <td>-0.013736</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>\r\n\r\nPenelitian ini bertujuan untuk mengeta...</td>
+      <td>4</td>
+      <td>0.120576</td>
+      <td>0.024087</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+<section id="labeling-cluster">
+<h2>Labeling Cluster<a class="headerlink" href="#labeling-cluster" title="Permalink to this headline">#</a></h2>
+<p>Untuk melakukan labeling cluster, bisa menggunakan logika mapping dan nilai value disini kita cocokan saja dengan nilai keynya</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cluster_map</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">:</span><span class="mi">5</span><span class="p">}</span>
+<span class="n">jurnal</span><span class="p">[</span><span class="s1">&#39;cluster&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">jurnal</span><span class="p">[</span><span class="s1">&#39;cluster&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">cluster_map</span><span class="p">)</span>
+<span class="n">jurnal</span><span class="p">[[</span><span class="s1">&#39;Abstraksi&#39;</span><span class="p">,</span><span class="s1">&#39;cluster&#39;</span><span class="p">,</span><span class="s1">&#39;x0&#39;</span><span class="p">,</span><span class="s1">&#39;x1&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Abstraksi</th>
+      <th>cluster</th>
+      <th>x0</th>
+      <th>x1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Abstrak\r\nPenelitian ini menggunakan metode k...</td>
+      <td>4</td>
+      <td>0.115475</td>
+      <td>0.047327</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Aplikasi nyata pemanfaatan teknologi informasi...</td>
+      <td>3</td>
+      <td>-0.030105</td>
+      <td>0.117857</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Tujuan penelitian ini adalah untuk mengidentif...</td>
+      <td>3</td>
+      <td>-0.038279</td>
+      <td>0.096144</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>PLN merupakan Badan Usaha Milik Negara yang be...</td>
+      <td>4</td>
+      <td>0.163460</td>
+      <td>-0.013736</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>\r\n\r\nPenelitian ini bertujuan untuk mengeta...</td>
+      <td>4</td>
+      <td>0.120576</td>
+      <td>0.024087</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+<section id="visualisasi">
+<h2>Visualisasi<a class="headerlink" href="#visualisasi" title="Permalink to this headline">#</a></h2>
+<p>Untuk memvisualisasikan kita menggunakan library seaborn karena caranya cukuplah mudah, berikut adalah cara menggunakan seaborn yang disimpan kedalam kata sns</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;TF-IDF + KMeans 20newsgroup clustering&quot;</span><span class="p">,</span> <span class="n">fontdict</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;fontsize&quot;</span><span class="p">:</span> <span class="mi">18</span><span class="p">})</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;X0&quot;</span><span class="p">,</span> <span class="n">fontdict</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;fontsize&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">})</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;X1&quot;</span><span class="p">,</span> <span class="n">fontdict</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;fontsize&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">})</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">scatterplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">jurnal</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;x0&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;x1&#39;</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s1">&#39;cluster&#39;</span><span class="p">,</span> <span class="n">palette</span><span class="o">=</span><span class="s2">&quot;viridis&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/UAS_70_0.png" src="_images/UAS_70_0.png" />
+</div>
+</div>
+<p>Dapat dilihat bahwa sistem mendeteksi 5 kelompok yang berbeda yang didapatkan dari kolom cluster pada data</p>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="topik-modeling-lsa">
+<h1>Topik Modeling LSA<a class="headerlink" href="#topik-modeling-lsa" title="Permalink to this headline">#</a></h1>
+<p>LSA merupakan metode yang memanfaatkan model statistik matematis untuk menganalisa struktur semantik suatu teks. LSA bisa digunakan untuk menilai esai dengan mengkonversikan esai menjadi matriks-matriks yang diberi nilai pada masing-masing term untuk dicari kesamaan dengan term referensi.</p>
+<section id="id4">
+<h2>Install Library<a class="headerlink" href="#id4" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">U</span> <span class="n">scikit</span><span class="o">-</span><span class="n">learn</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: scikit-learn in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (1.1.1)
+Requirement already satisfied: threadpoolctl&gt;=2.0.0 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from scikit-learn) (3.1.0)
+Requirement already satisfied: joblib&gt;=1.0.0 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from scikit-learn) (1.1.0)
+Requirement already satisfied: scipy&gt;=1.3.2 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from scikit-learn) (1.8.0)
+Requirement already satisfied: numpy&gt;=1.17.3 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from scikit-learn) (1.22.3)
+Note: you may need to restart the kernel to use updated packages.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING: You are using pip version 22.0.4; however, version 22.1.2 is available.
+You should consider upgrading via the &#39;C:\Users\ASUS A456UR\AppData\Local\Programs\Python\Python310\python.exe -m pip install --upgrade pip&#39; command.
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id5">
+<h2>Import Library<a class="headerlink" href="#id5" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.decomposition</span> <span class="kn">import</span> <span class="n">TruncatedSVD</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Setelah mengimport library yang dibutuhkan sekarang kita bisa melakukan LSA, namun sebelum melakukan LSA ada tahap untuk pengurungan dimensi agar bisa menemukan topik laten yang menangkap hubungan antara kata dan dokumen, pengurangan dimensi ini bisa dilakukan dengan cara Singular Value Decomposition (SVD) seperti dibawah ini</p>
+</section>
+<section id="membuat-document-term-matrix-dtm">
+<h2>Membuat Document Term Matrix (DTM)<a class="headerlink" href="#membuat-document-term-matrix-dtm" title="Permalink to this headline">#</a></h2>
+<p>Document Term Matrix adalah matriks matematis yang menggambarkan frekuensi istilah yang muncul dalam kumpulan dokumen, dengan DTM kita bisa dengan mudah untuk menentukan jumlah kata individual untuk setiap dokumen atau untuk semua dokumen. Misalkan untuk mengetahui kata mana yang lebih sering muncul dalam kumpulan dokumen dan menggunakan informasi tersebut untuk menentukan kata mana yang lebih mungkin “mewakili” dokumen tersebut. Nilai dari DTM sendiri menggunakan nilai dari TF-Idf. Beberapa poin penting yang perlu diperhatikan:</p>
+<ol>
+    <li>LSA pada umumnya diimplementasikan dengan menggunakan nilai TF-Idf dan tidak dengan Count Vectorizer</li>
+    <li>Nilai parameter max_feature bergantung pada daya komputasi</li>
+    <li>Nilai default untuk min_df dan max_df agar program dapat bekerja dengan baik</li>
+    <li>Bisa menggunakan nilai ngram_range yang berbeda</li>
+</ol>
+Setelah mengetahui poin penting, berikut code untuk cari Tf-IDF<div class="cell docutils container">
+<div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">dummy</span><span class="p">(</span><span class="n">doc</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">doc</span>
 <span class="n">vect</span> <span class="o">=</span> <span class="n">TfidfVectorizer</span><span class="p">(</span><span class="n">tokenizer</span><span class="o">=</span><span class="n">dummy</span><span class="p">,</span> <span class="n">lowercase</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
@@ -1062,484 +1840,7 @@ Untuk menggunakan Tf-IDF pada python kita bisa menggunakan TfidfVectorizer dari 
 </div>
 </div>
 </div>
-<p>Dapat dilihat bahwa kata penilitian adalah kata paling sering muncul, sedangkan with adalah kata paling jarang muncul</p>
-</section>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="k-means-clustering">
-<h1>K-Means Clustering<a class="headerlink" href="#k-means-clustering" title="Permalink to this headline">#</a></h1>
-<p>K-Means Clustering adalah suatu metode penganalisaan data atau metode Data Mining yang melakukan proses pemodelan unssupervised learning dan menggunakan metode yang mengelompokan data berbagai partisi. Algoritma untuk melakukan K-Means clustering adalah sebagai berikut:</p>
-<ol>
-    <li>Pilih K buah titik centroid secara acak</li>
-    <li>Kelompokkan data sehingga terbentuk K buah cluster dengan titik centroid dari setiap cluster merupakan titik centroid yang telah dipilih sebelumnya</li>
-    <li>Perbaharui nilai titik centroid</li>
-    <li>Ulangi langkah 2 dan 3 sampai nilai dari titik centroid tidak lagi berubah</li>
-</ol><section id="instal-library">
-<h2>Instal Library<a class="headerlink" href="#instal-library" title="Permalink to this headline">#</a></h2>
-<p>Sebelum memasuki koding kita perlu menginstall beberapa library seperti : scikit-learn, numpy, seaborn, matplotlib</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">U</span> <span class="n">scikit</span><span class="o">-</span><span class="n">learn</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: scikit-learn in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (1.1.1)
-Requirement already satisfied: joblib&gt;=1.0.0 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from scikit-learn) (1.1.0)
-Requirement already satisfied: threadpoolctl&gt;=2.0.0 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from scikit-learn) (3.1.0)
-Requirement already satisfied: scipy&gt;=1.3.2 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from scikit-learn) (1.8.0)
-Requirement already satisfied: numpy&gt;=1.17.3 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from scikit-learn) (1.22.3)
-Note: you may need to restart the kernel to use updated packages.
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING: You are using pip version 22.0.4; however, version 22.1.2 is available.
-You should consider upgrading via the &#39;C:\Users\ASUS A456UR\AppData\Local\Programs\Python\Python310\python.exe -m pip install --upgrade pip&#39; command.
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">numpy</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: numpy in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (1.22.3)
-Note: you may need to restart the kernel to use updated packages.
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING: You are using pip version 22.0.4; however, version 22.1.2 is available.
-You should consider upgrading via the &#39;C:\Users\ASUS A456UR\AppData\Local\Programs\Python\Python310\python.exe -m pip install --upgrade pip&#39; command.
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">seaborn</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: seaborn in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (0.11.2)
-Requirement already satisfied: matplotlib&gt;=2.2 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from seaborn) (3.5.2)
-Requirement already satisfied: scipy&gt;=1.0 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from seaborn) (1.8.0)
-Requirement already satisfied: numpy&gt;=1.15 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from seaborn) (1.22.3)
-Requirement already satisfied: pandas&gt;=0.23 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from seaborn) (1.4.1)
-Requirement already satisfied: packaging&gt;=20.0 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from matplotlib&gt;=2.2-&gt;seaborn) (21.3)
-Requirement already satisfied: pillow&gt;=6.2.0 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from matplotlib&gt;=2.2-&gt;seaborn) (9.0.1)
-Requirement already satisfied: python-dateutil&gt;=2.7 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from matplotlib&gt;=2.2-&gt;seaborn) (2.8.2)
-Requirement already satisfied: pyparsing&gt;=2.2.1 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from matplotlib&gt;=2.2-&gt;seaborn) (3.0.7)
-Requirement already satisfied: cycler&gt;=0.10 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from matplotlib&gt;=2.2-&gt;seaborn) (0.11.0)
-Requirement already satisfied: kiwisolver&gt;=1.0.1 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from matplotlib&gt;=2.2-&gt;seaborn) (1.4.2)
-Requirement already satisfied: fonttools&gt;=4.22.0 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from matplotlib&gt;=2.2-&gt;seaborn) (4.31.2)
-Requirement already satisfied: pytz&gt;=2020.1 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from pandas&gt;=0.23-&gt;seaborn) (2021.3)
-Requirement already satisfied: six&gt;=1.5 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from python-dateutil&gt;=2.7-&gt;matplotlib&gt;=2.2-&gt;seaborn) (1.16.0)
-Note: you may need to restart the kernel to use updated packages.
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING: You are using pip version 22.0.4; however, version 22.1.2 is available.
-You should consider upgrading via the &#39;C:\Users\ASUS A456UR\AppData\Local\Programs\Python\Python310\python.exe -m pip install --upgrade pip&#39; command.
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">matplotlib</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: matplotlib in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (3.5.2)
-Requirement already satisfied: pillow&gt;=6.2.0 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from matplotlib) (9.0.1)
-Requirement already satisfied: numpy&gt;=1.17 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from matplotlib) (1.22.3)
-Requirement already satisfied: cycler&gt;=0.10 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from matplotlib) (0.11.0)
-Requirement already satisfied: packaging&gt;=20.0 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from matplotlib) (21.3)
-Requirement already satisfied: python-dateutil&gt;=2.7 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from matplotlib) (2.8.2)
-Requirement already satisfied: fonttools&gt;=4.22.0 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from matplotlib) (4.31.2)
-Requirement already satisfied: pyparsing&gt;=2.2.1 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from matplotlib) (3.0.7)
-Requirement already satisfied: kiwisolver&gt;=1.0.1 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from matplotlib) (1.4.2)
-Requirement already satisfied: six&gt;=1.5 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from python-dateutil&gt;=2.7-&gt;matplotlib) (1.16.0)
-Note: you may need to restart the kernel to use updated packages.
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING: You are using pip version 22.0.4; however, version 22.1.2 is available.
-You should consider upgrading via the &#39;C:\Users\ASUS A456UR\AppData\Local\Programs\Python\Python310\python.exe -m pip install --upgrade pip&#39; command.
-</pre></div>
-</div>
-</div>
-</div>
-</section>
-<section id="id3">
-<h2>Import Library<a class="headerlink" href="#id3" title="Permalink to this headline">#</a></h2>
-<p>Import library yang dibutuhkan seperti, KMean dari sklearn.cluster, PCA dari sklearn.decomposition, numpy, seaborn</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.cluster</span> <span class="kn">import</span> <span class="n">KMeans</span>
-<span class="kn">from</span> <span class="nn">sklearn.decomposition</span> <span class="kn">import</span> <span class="n">PCA</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-</pre></div>
-</div>
-</div>
-</div>
-</section>
-<section id="inisialisasi-k-means">
-<h2>Inisialisasi K-Means<a class="headerlink" href="#inisialisasi-k-means" title="Permalink to this headline">#</a></h2>
-<p>Sesudah import library, selanjutnya inisasi KMean dengan 3 centroid. Kemudian fit dengan vector dari tfidf</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">kmeans</span> <span class="o">=</span> <span class="n">KMeans</span><span class="p">(</span><span class="n">n_clusters</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
-<span class="c1"># fit the model</span>
-<span class="n">kmeans</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">vect_text</span><span class="p">)</span>
-<span class="n">clusters</span> <span class="o">=</span> <span class="n">kmeans</span><span class="o">.</span><span class="n">labels_</span>
-</pre></div>
-</div>
-</div>
-</div>
-</section>
-<section id="reduksi-dimensi">
-<h2>Reduksi Dimensi<a class="headerlink" href="#reduksi-dimensi" title="Permalink to this headline">#</a></h2>
-<p>Untuk melakukan reduksi dimensi kita bisa menggunakan teknik Principal Component Analysis (PCA), dimana PCA akan mengurangi dimensi kumpulan data menjadi angka arbitrary sambil mempertahankan informasi yang ada pada data. Sederhananya PCA akan cenderung mempertahankan dimensi yang paling baik, dengan menghapus dimensi yang kontribusinya sedikit pada dimensi terakhir</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pca</span> <span class="o">=</span> <span class="n">PCA</span><span class="p">(</span><span class="n">n_components</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
-<span class="n">pca_vecs</span> <span class="o">=</span> <span class="n">pca</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">vect_text</span><span class="o">.</span><span class="n">toarray</span><span class="p">())</span>
-<span class="n">x0</span> <span class="o">=</span> <span class="n">pca_vecs</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span>
-<span class="n">x1</span> <span class="o">=</span> <span class="n">pca_vecs</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">]</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">x0</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">x1</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[ 0.1154748  -0.03010483 -0.03827888 ... -0.1367186  -0.15530668
- -0.14450373]
-[ 0.0473269   0.11785696  0.09614429 ... -0.07814701 -0.11722571
- -0.08843261]
-</pre></div>
-</div>
-</div>
-</div>
-<p>Pada code di atas pertama kita inisalisasi PCA dahulu dengan 2 komponen, kemudian set PCA dengan vector dari tfidf dan disimpan vector yang direduksi pada variabel pca_vecs. Kemudian simpan 2 dimensi tadi kepada variabel x0 dan x1. elanjutnya kita tambahkan kolom cluster, x0, dan x1 pada dataframe jurnal kita</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">jurnal</span><span class="p">[</span><span class="s1">&#39;cluster&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">clusters</span>
-<span class="n">jurnal</span><span class="p">[</span><span class="s1">&#39;x0&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">x0</span>
-<span class="n">jurnal</span><span class="p">[</span><span class="s1">&#39;x1&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">x1</span>
-<span class="n">jurnal</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Judul</th>
-      <th>Penulis</th>
-      <th>Dospem 1</th>
-      <th>Dospem 2</th>
-      <th>Abstraksi</th>
-      <th>Abstraction</th>
-      <th>Link Download</th>
-      <th>cluster</th>
-      <th>x0</th>
-      <th>x1</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>PENGARUH KEPEMIMPINAN DAN KOMPENSASI TERHADAP ...</td>
-      <td>Hendri Wahyudi Prayitno</td>
-      <td>Dra. Hj. S Anugrahini Irawati, MM</td>
-      <td>Helmi Buyung Aulia,S,ST,SE,.MT</td>
-      <td>Abstrak\r\nPenelitian ini menggunakan metode k...</td>
-      <td>Abstract\r\nThis research use quantitative met...</td>
-      <td>https://pta.trunojoyo.ac.id/uploads/journals/0...</td>
-      <td>2</td>
-      <td>0.115475</td>
-      <td>0.047327</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>Pengukuran Website Quality Pada Situs Sistem A...</td>
-      <td>Muhammad Zakaria Utomo</td>
-      <td>Dr. Ir. Nurita Andriani, MM</td>
-      <td>Nirma Kurriwati, SP, M.Si</td>
-      <td>Aplikasi nyata pemanfaatan teknologi informasi...</td>
-      <td>Academic portal system in University of Trunoj...</td>
-      <td>https://pta.trunojoyo.ac.id/uploads/journals/1...</td>
-      <td>1</td>
-      <td>-0.030105</td>
-      <td>0.117857</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>PENGARUH PERSEPSI MANFAAT, PERSEPSI KEMUDAHAN,...</td>
-      <td>Ahmad</td>
-      <td>Bambang Setiyo Pambudi, S.E., MM.</td>
-      <td>Fathor AS, S.E., MM.</td>
-      <td>Tujuan penelitian ini adalah untuk mengidentif...</td>
-      <td>The purpose of this research was to identify v...</td>
-      <td>https://pta.trunojoyo.ac.id/uploads/journals/0...</td>
-      <td>1</td>
-      <td>-0.038279</td>
-      <td>0.096144</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>PENGARUH PENGEMBANGAN KARIR TERHADAP SEMANGAT ...</td>
-      <td>Danial Aziz M.YD</td>
-      <td>Dr. Hj. Iriani Ismail, Dra.,MM</td>
-      <td>Drs. Ec. Mudji Kuswinarno, M.Si</td>
-      <td>PLN merupakan Badan Usaha Milik Negara yang be...</td>
-      <td>PLN is a state-owned enterprise dealy with the...</td>
-      <td>https://pta.trunojoyo.ac.id/uploads/journals/0...</td>
-      <td>2</td>
-      <td>0.163460</td>
-      <td>-0.013736</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>PENGARUH FAKTOR-FAKTOR STRES KERJA TERHADAP DI...</td>
-      <td>Saiful Rahman</td>
-      <td>Dr. Muhammad Alkirom Wildan,S.E.,M.Si</td>
-      <td>Helmi Buyung Aulia,S.ST.,S.E.,M.MT</td>
-      <td>\r\n\r\nPenelitian ini bertujuan untuk mengeta...</td>
-      <td>\r\n\r\nThis study aimed to determine the effe...</td>
-      <td>https://pta.trunojoyo.ac.id/uploads/journals/0...</td>
-      <td>2</td>
-      <td>0.120576</td>
-      <td>0.024087</td>
-    </tr>
-  </tbody>
-</table>
-</div></div></div>
-</div>
-</section>
-<section id="labeling-cluster">
-<h2>Labeling Cluster<a class="headerlink" href="#labeling-cluster" title="Permalink to this headline">#</a></h2>
-<p>Sekarang mari kita lihat keywords terbaik yang paling relavan untuk setiap centroid, agar kita bisa dapat mengganti nama setiap cluster dengan label yang lebih baik</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">get_top_keywords</span><span class="p">(</span><span class="n">n_terms</span><span class="p">):</span>
-    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">vect_text</span><span class="o">.</span><span class="n">todense</span><span class="p">())</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">clusters</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
-    <span class="n">terms</span> <span class="o">=</span> <span class="n">vect</span><span class="o">.</span><span class="n">get_feature_names_out</span><span class="p">()</span>
-    <span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">r</span> <span class="ow">in</span> <span class="n">df</span><span class="o">.</span><span class="n">iterrows</span><span class="p">():</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">Cluster </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">terms</span><span class="p">[</span><span class="n">t</span><span class="p">]</span> <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">argsort</span><span class="p">(</span><span class="n">r</span><span class="p">)[</span><span class="o">-</span><span class="n">n_terms</span><span class="p">:]]))</span>
-            
-<span class="n">get_top_keywords</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Cluster 0
-uji,Return,penelitian,Bursa,Efek,Perusahaan,Indonesia,saham,Ratio,perusahaan
-
-Cluster 1
-merek,X,berpengaruh,konsumen,uji,penelitian,produk,variabel,pembelian,keputusan
-
-Cluster 2
-PT,Kerja,signifikan,positif,nilai,berpengaruh,variabel,kinerja,karyawan,kerja
-</pre></div>
-</div>
-</div>
-</div>
-<p>Untuk logika pada code di atas kurang lebih seperti ini. Pertama kita buat function dahulu dengan nama get_top_keywords dengan parameter mau berapa kata kunci. Kemudian kita grup tf-idf vector dengan nama cluster, sesudah itu kita tampilkan kata yang ada. Dan yang terakhir kita looping untuk setiap barisnya, kemudian kita cari n suku yang memiliki skor tf idf tertinggi. Setelah didapatkan kata kuncinya apa saja, kemudian kita lakukan labeling tiap cluster yang ada</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># map clusters to appropriate labels </span>
-<span class="n">cluster_map</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">:</span> <span class="s2">&quot;Bursa Efek&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span> <span class="s2">&quot;Penjualan&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span> <span class="s2">&quot;Pekerjaan&quot;</span><span class="p">}</span>
-<span class="c1"># apply mapping</span>
-<span class="n">jurnal</span><span class="p">[</span><span class="s1">&#39;cluster&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">jurnal</span><span class="p">[</span><span class="s1">&#39;cluster&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">cluster_map</span><span class="p">)</span>
-<span class="n">jurnal</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Judul</th>
-      <th>Penulis</th>
-      <th>Dospem 1</th>
-      <th>Dospem 2</th>
-      <th>Abstraksi</th>
-      <th>Abstraction</th>
-      <th>Link Download</th>
-      <th>cluster</th>
-      <th>x0</th>
-      <th>x1</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>PENGARUH KEPEMIMPINAN DAN KOMPENSASI TERHADAP ...</td>
-      <td>Hendri Wahyudi Prayitno</td>
-      <td>Dra. Hj. S Anugrahini Irawati, MM</td>
-      <td>Helmi Buyung Aulia,S,ST,SE,.MT</td>
-      <td>Abstrak\r\nPenelitian ini menggunakan metode k...</td>
-      <td>Abstract\r\nThis research use quantitative met...</td>
-      <td>https://pta.trunojoyo.ac.id/uploads/journals/0...</td>
-      <td>Pekerjaan</td>
-      <td>0.115475</td>
-      <td>0.047327</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>Pengukuran Website Quality Pada Situs Sistem A...</td>
-      <td>Muhammad Zakaria Utomo</td>
-      <td>Dr. Ir. Nurita Andriani, MM</td>
-      <td>Nirma Kurriwati, SP, M.Si</td>
-      <td>Aplikasi nyata pemanfaatan teknologi informasi...</td>
-      <td>Academic portal system in University of Trunoj...</td>
-      <td>https://pta.trunojoyo.ac.id/uploads/journals/1...</td>
-      <td>Penjualan</td>
-      <td>-0.030105</td>
-      <td>0.117857</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>PENGARUH PERSEPSI MANFAAT, PERSEPSI KEMUDAHAN,...</td>
-      <td>Ahmad</td>
-      <td>Bambang Setiyo Pambudi, S.E., MM.</td>
-      <td>Fathor AS, S.E., MM.</td>
-      <td>Tujuan penelitian ini adalah untuk mengidentif...</td>
-      <td>The purpose of this research was to identify v...</td>
-      <td>https://pta.trunojoyo.ac.id/uploads/journals/0...</td>
-      <td>Penjualan</td>
-      <td>-0.038279</td>
-      <td>0.096144</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>PENGARUH PENGEMBANGAN KARIR TERHADAP SEMANGAT ...</td>
-      <td>Danial Aziz M.YD</td>
-      <td>Dr. Hj. Iriani Ismail, Dra.,MM</td>
-      <td>Drs. Ec. Mudji Kuswinarno, M.Si</td>
-      <td>PLN merupakan Badan Usaha Milik Negara yang be...</td>
-      <td>PLN is a state-owned enterprise dealy with the...</td>
-      <td>https://pta.trunojoyo.ac.id/uploads/journals/0...</td>
-      <td>Pekerjaan</td>
-      <td>0.163460</td>
-      <td>-0.013736</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>PENGARUH FAKTOR-FAKTOR STRES KERJA TERHADAP DI...</td>
-      <td>Saiful Rahman</td>
-      <td>Dr. Muhammad Alkirom Wildan,S.E.,M.Si</td>
-      <td>Helmi Buyung Aulia,S.ST.,S.E.,M.MT</td>
-      <td>\r\n\r\nPenelitian ini bertujuan untuk mengeta...</td>
-      <td>\r\n\r\nThis study aimed to determine the effe...</td>
-      <td>https://pta.trunojoyo.ac.id/uploads/journals/0...</td>
-      <td>Pekerjaan</td>
-      <td>0.120576</td>
-      <td>0.024087</td>
-    </tr>
-  </tbody>
-</table>
-</div></div></div>
-</div>
-<p>Karena pada cluster 0 identik dengan bursa dan perusahan maka kita label dengan “Bursa Efek”, kemudian pada cluster 1 identuk dengan konsumen dan pembelian maka kita labeling dengan “Penjualan”, dan yang terakhir pada cluster 2 identik dengan karyawan dan PT maka kita labeling dengan “Pekerjaan”</p>
-</section>
-<section id="visualisasi">
-<h2>Visualisasi<a class="headerlink" href="#visualisasi" title="Permalink to this headline">#</a></h2>
-<p>Untuk memvisualisasikan kita menggunakan library seaborn karena caranya cukuplah mudah</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># set image size</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
-<span class="c1"># set a title</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;TF-IDF + KMeans 20newsgroup clustering&quot;</span><span class="p">,</span> <span class="n">fontdict</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;fontsize&quot;</span><span class="p">:</span> <span class="mi">18</span><span class="p">})</span>
-<span class="c1"># set axes names</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;X0&quot;</span><span class="p">,</span> <span class="n">fontdict</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;fontsize&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">})</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;X1&quot;</span><span class="p">,</span> <span class="n">fontdict</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;fontsize&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">})</span>
-<span class="c1"># create scatter plot with seaborn, where hue is the class used to group the data</span>
-<span class="n">sns</span><span class="o">.</span><span class="n">scatterplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">jurnal</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;x0&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;x1&#39;</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s1">&#39;cluster&#39;</span><span class="p">,</span> <span class="n">palette</span><span class="o">=</span><span class="s2">&quot;viridis&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<img alt="_images/UAS_73_0.png" src="_images/UAS_73_0.png" />
-</div>
-</div>
-<p>Dapat dilihat bahwa sistem mendeteksi 3 kelompok yang berbeda yaitu Penjualan dengan warna biru tua, Bursa Efek dengan warna hijau ke biruan, dan Pekerjaan dengan warna hijau</p>
-</section>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="topik-modeling-lsa">
-<h1>Topik Modeling LSA<a class="headerlink" href="#topik-modeling-lsa" title="Permalink to this headline">#</a></h1>
-<p>LSA merupakan metode yang memanfaatkan model statistik matematis untuk menganalisa struktur semantik suatu teks. LSA bisa digunakan untuk menilai esai dengan mengkonversikan esai menjadi matriks-matriks yang diberi nilai pada masing-masing term untuk dicari kesamaan dengan term referensi.</p>
-<section id="id4">
-<h2>Install Library<a class="headerlink" href="#id4" title="Permalink to this headline">#</a></h2>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">U</span> <span class="n">scikit</span><span class="o">-</span><span class="n">learn</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: scikit-learn in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (1.1.1)
-Requirement already satisfied: numpy&gt;=1.17.3 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from scikit-learn) (1.22.3)
-Requirement already satisfied: joblib&gt;=1.0.0 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from scikit-learn) (1.1.0)
-Requirement already satisfied: scipy&gt;=1.3.2 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from scikit-learn) (1.8.0)
-Requirement already satisfied: threadpoolctl&gt;=2.0.0 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from scikit-learn) (3.1.0)
-Note: you may need to restart the kernel to use updated packages.
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING: You are using pip version 22.0.4; however, version 22.1.2 is available.
-You should consider upgrading via the &#39;C:\Users\ASUS A456UR\AppData\Local\Programs\Python\Python310\python.exe -m pip install --upgrade pip&#39; command.
-</pre></div>
-</div>
-</div>
-</div>
-</section>
-<section id="id5">
-<h2>Import Library<a class="headerlink" href="#id5" title="Permalink to this headline">#</a></h2>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.decomposition</span> <span class="kn">import</span> <span class="n">TruncatedSVD</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>Setelah mengimport library yang dibutuhkan sekarang kita bisa melakukan LSA, namun sebelum melakukan LSA ada tahap untuk pengurungan dimensi agar bisa menemukan topik laten yang menangkap hubungan antara kata dan dokumen, pengurangan dimensi ini bisa dilakukan dengan cara Singular Value Decomposition (SVD) seperti dibawah ini</p>
+<p>Dapat dilihat bahwa kata penilitian adalah kata paling sering muncul, sedangkan kata zulkifli adalah kata paling jarang muncul</p>
 </section>
 <section id="singular-value-decomposition-svd">
 <h2>Singular Value Decomposition (SVD)<a class="headerlink" href="#singular-value-decomposition-svd" title="Permalink to this headline">#</a></h2>

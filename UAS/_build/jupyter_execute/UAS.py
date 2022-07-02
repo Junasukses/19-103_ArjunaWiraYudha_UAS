@@ -44,7 +44,7 @@ import re
 #     <li>Mereplace kata yang tidak digunakan dengan kata yang ingin digunakan</li>
 # </ul>
 
-# In[219]:
+# In[202]:
 
 
 class QuotesSpider(scrapy.Spider):
@@ -87,13 +87,13 @@ class QuotesSpider(scrapy.Spider):
 
 # Library yang perlu diinstall untuk melakukan preprocesing data ada dua yaitu, nltk dan scikit learn
 
-# In[220]:
+# In[203]:
 
 
 pip install --user -U nltk
 
 
-# In[221]:
+# In[204]:
 
 
 pip install -U scikit-learn
@@ -103,7 +103,7 @@ pip install -U scikit-learn
 
 # Sesudah install, kita import library yang dibutuhkan (untuk string udah otomatis terinstall)
 
-# In[222]:
+# In[205]:
 
 
 import pandas as pd
@@ -120,7 +120,7 @@ import re
 
 # Stop Word adalah tahap untuk menghilangkan kata yang tidak memiliki arti, seperti preposisi, konjungsi, dan lain sebagainya. Contoh kata yang dihilangkan dari Stop Word adalah yang, di, ke, dan lainnya. Tanpa perlu berlama-lama mari langsung kepada tahap kodingnya, pertama tama kita load data yang sudah kita crawling tadi. Karena tadi hasil yang saya save dengan nama **crawlingpta.csv** maka pada saat load dengan pandas yang saya tuju adalah file **crawlingpta.csv**
 
-# In[223]:
+# In[206]:
 
 
 jurnal = pd.read_csv('crawlUAS.csv')
@@ -128,7 +128,7 @@ jurnal = pd.read_csv('crawlUAS.csv')
 
 # Sesudah meload data selanjutnya memilih kolom yang ingin di proses, disini saya akan memproses kolom **abstraksi**, dan pada kolom itu juga saya akan menghilangkan angka yang akan mengganggu. Tahap ini juga termasuk dalam bagian Cleaning Data, tahap ini saya lakukan di awal karena kalau udah masuk ke stop word akan susah di proses. Untuk melakukannya saya buat function yang bernama **remove_number** dan di function ini akan mengembalikan nilai berupa text dimana jika ada angka akan dihapus, dan ketika memanggil kolom dikasih apply dan memanggil functionnya
 
-# In[224]:
+# In[207]:
 
 
 def remove_number(text):
@@ -140,7 +140,7 @@ pre_abstrak
 
 # Kemudian langkah sebelum memasuki stop word adalah harus tokenize kalimat dahulu, tokenize adalah proses untuk membagi kalimat ke dalam bagian bagian tertentu
 
-# In[225]:
+# In[208]:
 
 
 word_tokens = pre_abstrak.apply(word_tokenize)
@@ -149,7 +149,7 @@ word_tokens
 
 # Langkah selanjutnya adalah Stop Word. Karena disini saya menggunakan nltk maka harus menentukan dahulu bahasa yang digunakan untuk menentukan bahasa menggunakan **stopwords.words('indonesian')**. Kemudian jika dirasa list stop word masih ada yang kurang maka kita bisa menambahkan sendiri dengan cara membuat list kata yang tidak ada di stop word kemudian kita extend dengan list yang kita buat sendiri **stop_words.extend(list)**
 
-# In[226]:
+# In[209]:
 
 
 stop_words = stopwords.words('indonesian')
@@ -166,7 +166,7 @@ for i in range(1,4):
 
 # Cleaning Data adalah proses untuk membersihkan data yang ada menjadi data yang bisa diolah. Data yang dibersihkan seperti missing value atau data kosong, karakter asing, menghilangkan angka, dan lain sebaginaya. Untuk proses penghilangan angka sudah dilakukan ketika memilih tabel **abstraksi**, maka sekarang tinggal menghilangkan karakter asing dan sekawannya. Untuk melakukan itu kita bisa menggunakan library string.punctuation. Dimana ia akan menghilangkan karakter asing yang ada
 
-# In[227]:
+# In[210]:
 
 
 clearData = [[w for w in z if w not in string.punctuation and w.isalpha()] for z in after] 
@@ -187,41 +187,29 @@ for i in range(1,4):
 # </ul>
 # Untuk menggunakan Tf-IDF pada python kita bisa menggunakan TfidfVectorizer dari sklearn
 
-# In[228]:
+# In[211]:
 
 
-def dummy(doc):
-    return doc
-vect = TfidfVectorizer(tokenizer=dummy, lowercase=False)
-vect_text = vect.fit_transform(clearData)
-vect_text_tranpose = vect_text.transpose()
-df = pd.DataFrame(vect_text_tranpose.toarray())
+vectorizer = TfidfVectorizer(stop_words='english')
+berita = []
+for data in clearData:
+    isi = ''
+    for term in data:
+        isi += term + ' '
+    berita.append(isi)
+vectorizer.fit(berita)
+vector = vectorizer.transform(berita)
+a= vectorizer.get_feature_names_out()
+count = vector.toarray()
+df = pd.DataFrame(data=count,columns = [a])
 
+from sklearn.feature_extraction.text import TfidfTransformer
+tfidf=TfidfTransformer(use_idf=True, norm='l2', smooth_idf=True)
+tf = tfidf.fit_transform(vectorizer.fit_transform(berita)).toarray()
 
-# Setelah kita set Tf-idf dari data, kita cek dahulu apakah baris dan kolom sesuai dengan kata dan dokumennya menggunakan fungsi **shape** dan kita coba print 5 nilai
+dfp =pd.DataFrame(data=tf, index=range(1,len(tf[:,1])+1, ),columns=[a])
+dfp
 
-# In[229]:
-
-
-print(vect_text.shape)
-print(df.head(5))
-
-
-# Setelah Tf-idf berhasil dilakukan, kita bisa melihat kata yang paling sering muncul dan kata yang paling jarang muncul berdasarkan nilai Tf-idf diatas. Semakin kecil nilainya maka dia sering digunakan, sedangkan jika besar nilainya maka dia jarang digunakan.
-
-# In[230]:
-
-
-idf=vect.idf_
-dd=dict(zip(vect.get_feature_names_out(), idf))
-l=sorted(dd, key=(dd).get)
-# print(l)
-print(l[0],l[-1])
-print(dd['penelitian'])
-print(dd['with'])
-
-
-# Dapat dilihat bahwa kata penilitian adalah kata paling sering muncul, sedangkan with adalah kata paling jarang muncul
 
 # # K-Means Clustering
 
@@ -237,25 +225,25 @@ print(dd['with'])
 
 # Sebelum memasuki koding kita perlu menginstall beberapa library seperti : scikit-learn, numpy, seaborn, matplotlib
 
-# In[231]:
+# In[212]:
 
 
 pip install -U scikit-learn
 
 
-# In[232]:
+# In[213]:
 
 
 pip install numpy
 
 
-# In[233]:
+# In[214]:
 
 
 pip install seaborn
 
 
-# In[234]:
+# In[215]:
 
 
 pip install matplotlib
@@ -265,7 +253,7 @@ pip install matplotlib
 
 # Import library yang dibutuhkan seperti, KMean dari sklearn.cluster, PCA dari sklearn.decomposition, numpy, seaborn
 
-# In[235]:
+# In[216]:
 
 
 from sklearn.cluster import KMeans
@@ -275,16 +263,44 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 
 
+# ## Menentukan Nilai K Terbaik Dengan Metode Elbow
+
+# Langkah awal untuk memulai KMeans adalah dengan menentukan berapa banyak cluster yang mau ditentukan, untuk mencari cluster berapa banyak cluster yang tepat bisa menggunakan metode elbow. Metode Elbow sendiri merupakan salah satu metode untuk menentukan jumlah cluster yang tepat pada K-Means melalui persentase hasil perbandingan antara jumlah cluster yang akan membentuk siku siku pada suatu titik cluster yang tepat. Untuk mencari Elbow bisa menggunakan looping dengan ketentuan cluster pada insialisasi KMeans bernilai iterasi loopingnya, berikut adalah code dan visualisasi elbownya
+
+# In[217]:
+
+
+distortions = []
+K = range(1,10)
+for k in K:
+    kmeanModel = KMeans(n_clusters=k)
+    kmeanModel.fit(df_pca)
+    distortions.append(kmeanModel.inertia_)
+
+
+# In[218]:
+
+
+plt.figure(figsize=(10,8))
+plt.plot(K, distortions, 'bx-')
+plt.xlabel('k')
+plt.ylabel('Distortion')
+plt.title('Nilai k yang paling optimal adalah')
+plt.show()
+
+
+# Dapat dilihat bahwa K yang membentuk siku adalah K yang kelima maka nanti pada implementasi K-Means akan menggunakan 5 cluster
+
 # ## Inisialisasi K-Means
 
-# Sesudah import library, selanjutnya inisasi KMean dengan 3 centroid. Kemudian fit dengan vector dari tfidf
+# Sesudah import library, selanjutnya inisasi KMean dengan 3 centroid atau cluster sesuai dengan hasil metode elbow. Kemudian fit dengan vector dari tfidf
 
-# In[236]:
+# In[219]:
 
 
-kmeans = KMeans(n_clusters=3, random_state=42)
+kmeans = KMeans(n_clusters=5, random_state=42)
 # fit the model
-kmeans.fit(vect_text)
+kmeans.fit(dfp)
 clusters = kmeans.labels_
 
 
@@ -292,7 +308,7 @@ clusters = kmeans.labels_
 
 # Untuk melakukan reduksi dimensi kita bisa menggunakan teknik Principal Component Analysis (PCA), dimana PCA akan mengurangi dimensi kumpulan data menjadi angka arbitrary sambil mempertahankan informasi yang ada pada data. Sederhananya PCA akan cenderung mempertahankan dimensi yang paling baik, dengan menghapus dimensi yang kontribusinya sedikit pada dimensi terakhir
 
-# In[237]:
+# In[220]:
 
 
 pca = PCA(n_components=2, random_state=42)
@@ -305,66 +321,43 @@ print(x1)
 
 # Pada code di atas pertama kita inisalisasi PCA dahulu dengan 2 komponen, kemudian set PCA dengan vector dari tfidf dan disimpan vector yang direduksi pada variabel pca_vecs. Kemudian simpan 2 dimensi tadi kepada variabel x0 dan x1. elanjutnya kita tambahkan kolom cluster, x0, dan x1 pada dataframe jurnal kita 
 
-# In[250]:
+# In[221]:
 
 
 jurnal['cluster'] = clusters
 jurnal['x0'] = x0
 jurnal['x1'] = x1
-jurnal.head(5)
+jurnal[['Abstraksi','cluster','x0','x1']].head(5)
 
 
 # ## Labeling Cluster
 
-# Sekarang mari kita lihat keywords terbaik yang paling relavan untuk setiap centroid, agar kita bisa dapat mengganti nama setiap cluster dengan label yang lebih baik 
+# Untuk melakukan labeling cluster, bisa menggunakan logika mapping dan nilai value disini kita cocokan saja dengan nilai keynya
 
-# In[239]:
-
-
-def get_top_keywords(n_terms):
-    df = pd.DataFrame(vect_text.todense()).groupby(clusters).mean()
-    terms = vect.get_feature_names_out()
-    for i,r in df.iterrows():
-        print('\nCluster {}'.format(i))
-        print(','.join([terms[t] for t in np.argsort(r)[-n_terms:]]))
-            
-get_top_keywords(10)
+# In[222]:
 
 
-# Untuk logika pada code di atas kurang lebih seperti ini. Pertama kita buat function dahulu dengan nama get_top_keywords dengan parameter mau berapa kata kunci. Kemudian kita grup tf-idf vector dengan nama cluster, sesudah itu kita tampilkan kata yang ada. Dan yang terakhir kita looping untuk setiap barisnya, kemudian kita cari n suku yang memiliki skor tf idf tertinggi. Setelah didapatkan kata kuncinya apa saja, kemudian kita lakukan labeling tiap cluster yang ada
-
-# In[249]:
-
-
-# map clusters to appropriate labels 
-cluster_map = {0: "Bursa Efek", 1: "Penjualan", 2: "Pekerjaan"}
-# apply mapping
+cluster_map = {0: 0, 1: 1, 2: 2, 3: 3, 4: 4, 5:5}
 jurnal['cluster'] = jurnal['cluster'].map(cluster_map)
-jurnal.head(5)
+jurnal[['Abstraksi','cluster','x0','x1']].head(5)
 
-
-# Karena pada cluster 0 identik dengan bursa dan perusahan maka kita label dengan "Bursa Efek", kemudian pada cluster 1 identuk dengan konsumen dan pembelian maka kita labeling dengan "Penjualan", dan yang terakhir pada cluster 2 identik dengan karyawan dan PT maka kita labeling dengan "Pekerjaan"
 
 # ## Visualisasi
 
-# Untuk memvisualisasikan kita menggunakan library seaborn karena caranya cukuplah mudah
+# Untuk memvisualisasikan kita menggunakan library seaborn karena caranya cukuplah mudah, berikut adalah cara menggunakan seaborn yang disimpan kedalam kata sns
 
-# In[241]:
+# In[236]:
 
 
-# set image size
 plt.figure(figsize=(10, 5))
-# set a title
 plt.title("TF-IDF + KMeans 20newsgroup clustering", fontdict={"fontsize": 18})
-# set axes names
 plt.xlabel("X0", fontdict={"fontsize": 10})
 plt.ylabel("X1", fontdict={"fontsize": 10})
-# create scatter plot with seaborn, where hue is the class used to group the data
 sns.scatterplot(data=jurnal, x='x0', y='x1', hue='cluster', palette="viridis")
 plt.show()
 
 
-# Dapat dilihat bahwa sistem mendeteksi 3 kelompok yang berbeda yaitu Penjualan dengan warna biru tua, Bursa Efek dengan warna hijau ke biruan, dan Pekerjaan dengan warna hijau
+# Dapat dilihat bahwa sistem mendeteksi 5 kelompok yang berbeda yang didapatkan dari kolom cluster pada data
 
 # # Topik Modeling LSA
 
@@ -372,7 +365,7 @@ plt.show()
 
 # ## Install Library
 
-# In[242]:
+# In[224]:
 
 
 pip install -U scikit-learn
@@ -380,13 +373,60 @@ pip install -U scikit-learn
 
 # ## Import Library
 
-# In[243]:
+# In[225]:
 
 
 from sklearn.decomposition import TruncatedSVD
 
 
 # Setelah mengimport library yang dibutuhkan sekarang kita bisa melakukan LSA, namun sebelum melakukan LSA ada tahap untuk pengurungan dimensi agar bisa menemukan topik laten yang menangkap hubungan antara kata dan dokumen, pengurangan dimensi ini bisa dilakukan dengan cara Singular Value Decomposition (SVD) seperti dibawah ini
+
+# ## Membuat Document Term Matrix (DTM)
+
+# Document Term Matrix adalah matriks matematis yang menggambarkan frekuensi istilah yang muncul dalam kumpulan dokumen, dengan DTM kita bisa dengan mudah untuk menentukan jumlah kata individual untuk setiap dokumen atau untuk semua dokumen. Misalkan untuk mengetahui kata mana yang lebih sering muncul dalam kumpulan dokumen dan menggunakan informasi tersebut untuk menentukan kata mana yang lebih mungkin “mewakili” dokumen tersebut. Nilai dari DTM sendiri menggunakan nilai dari TF-Idf. Beberapa poin penting yang perlu diperhatikan:
+# <ol>
+#     <li>LSA pada umumnya diimplementasikan dengan menggunakan nilai TF-Idf dan tidak dengan Count Vectorizer</li>
+#     <li>Nilai parameter max_feature bergantung pada daya komputasi</li>
+#     <li>Nilai default untuk min_df dan max_df agar program dapat bekerja dengan baik</li>
+#     <li>Bisa menggunakan nilai ngram_range yang berbeda</li>
+# </ol>
+# Setelah mengetahui poin penting, berikut code untuk cari Tf-IDF
+
+# In[226]:
+
+
+def dummy(doc):
+    return doc
+vect = TfidfVectorizer(tokenizer=dummy, lowercase=False)
+vect_text = vect.fit_transform(clearData)
+vect_text_tranpose = vect_text.transpose()
+df = pd.DataFrame(vect_text_tranpose.toarray())
+
+
+# Setelah kita set Tf-idf dari data, kita cek dahulu apakah baris dan kolom sesuai dengan kata dan dokumennya menggunakan fungsi **shape** dan kita coba print 5 nilai
+
+# In[227]:
+
+
+print(vect_text.shape)
+print(df.head(5))
+
+
+# Setelah Tf-idf berhasil dilakukan, kita bisa melihat kata yang paling sering muncul dan kata yang paling jarang muncul berdasarkan nilai Tf-idf diatas. Semakin kecil nilainya maka dia sering digunakan, sedangkan jika besar nilainya maka dia jarang digunakan.
+
+# In[228]:
+
+
+idf=vect.idf_
+dd=dict(zip(vect.get_feature_names_out(), idf))
+l=sorted(dd, key=(dd).get)
+# print(l)
+print(l[0],l[-1])
+print(dd['penelitian'])
+print(dd['with'])
+
+
+# Dapat dilihat bahwa kata penilitian adalah kata paling sering muncul, sedangkan kata zulkifli adalah kata paling jarang muncul
 
 # ## Singular Value Decomposition (SVD)
 
@@ -406,7 +446,7 @@ from sklearn.decomposition import TruncatedSVD
 
 # ![Visualisasi Truncated SVD](visualisasi.png)
 
-# In[244]:
+# In[229]:
 
 
 lsa_model = TruncatedSVD(n_components=10, algorithm='randomized', n_iter=10, random_state=42)
@@ -416,7 +456,7 @@ print(lsa_top)
 print(lsa_top.shape)
 
 
-# In[245]:
+# In[230]:
 
 
 l=lsa_top[0]
@@ -425,7 +465,7 @@ for i,topic in enumerate(l):
   print("Topic ",i," : ",topic*100)
 
 
-# In[246]:
+# In[231]:
 
 
 print(lsa_model.components_.shape)
@@ -436,7 +476,7 @@ print(lsa_model.components_)
 
 # Setelah dilakukan Truncated Matrix, sekarang kita dapat melakukan ekstrak topik dokumen. Pada percobaan kali ini, dilakukan extrak sebanyak 10 topik.
 
-# In[247]:
+# In[232]:
 
 
 vocab = vect.get_feature_names_out()
