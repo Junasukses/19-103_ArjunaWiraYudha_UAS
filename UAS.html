@@ -408,6 +408,11 @@ title="Print to PDF"
     </a>
    </li>
    <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#reduksi-dimensi">
+     Reduksi Dimensi
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#menentukan-nilai-k-terbaik-dengan-metode-elbow">
      Menentukan Nilai K Terbaik Dengan Metode Elbow
     </a>
@@ -415,11 +420,6 @@ title="Print to PDF"
    <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#inisialisasi-k-means">
      Inisialisasi K-Means
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#reduksi-dimensi">
-     Reduksi Dimensi
     </a>
    </li>
    <li class="toc-h2 nav-item toc-entry">
@@ -567,6 +567,11 @@ title="Print to PDF"
     </a>
    </li>
    <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#reduksi-dimensi">
+     Reduksi Dimensi
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#menentukan-nilai-k-terbaik-dengan-metode-elbow">
      Menentukan Nilai K Terbaik Dengan Metode Elbow
     </a>
@@ -574,11 +579,6 @@ title="Print to PDF"
    <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#inisialisasi-k-means">
      Inisialisasi K-Means
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#reduksi-dimensi">
-     Reduksi Dimensi
     </a>
    </li>
    <li class="toc-h2 nav-item toc-entry">
@@ -652,42 +652,42 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: Scrapy in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (2.6.1)
-Requirement already satisfied: protego&gt;=0.1.15 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from Scrapy) (0.2.1)
 Requirement already satisfied: itemloaders&gt;=1.0.1 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from Scrapy) (1.0.4)
+Requirement already satisfied: tldextract in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from Scrapy) (3.2.0)
+Requirement already satisfied: PyDispatcher&gt;=2.0.5 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from Scrapy) (2.0.5)
 Requirement already satisfied: queuelib&gt;=1.4.2 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from Scrapy) (1.6.2)
+Requirement already satisfied: cryptography&gt;=2.0 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from Scrapy) (36.0.1)
+Requirement already satisfied: parsel&gt;=1.5.0 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from Scrapy) (1.6.0)
+Requirement already satisfied: service-identity&gt;=16.0.0 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from Scrapy) (21.1.0)
+Requirement already satisfied: cssselect&gt;=0.9.1 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from Scrapy) (1.1.0)
+Requirement already satisfied: Twisted&gt;=17.9.0 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from Scrapy) (22.2.0)
 Requirement already satisfied: pyOpenSSL&gt;=16.2.0 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from Scrapy) (22.0.0)
 Requirement already satisfied: zope.interface&gt;=4.1.3 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from Scrapy) (5.4.0)
-Requirement already satisfied: lxml&gt;=3.5.0 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from Scrapy) (4.8.0)
-Requirement already satisfied: PyDispatcher&gt;=2.0.5 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from Scrapy) (2.0.5)
-Requirement already satisfied: Twisted&gt;=17.9.0 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from Scrapy) (22.2.0)
-Requirement already satisfied: cssselect&gt;=0.9.1 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from Scrapy) (1.1.0)
-Requirement already satisfied: w3lib&gt;=1.17.0 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from Scrapy) (1.22.0)
-Requirement already satisfied: service-identity&gt;=16.0.0 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from Scrapy) (21.1.0)
-Requirement already satisfied: setuptools in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from Scrapy) (58.1.0)
-Requirement already satisfied: tldextract in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from Scrapy) (3.2.0)
 Requirement already satisfied: itemadapter&gt;=0.1.0 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from Scrapy) (0.4.0)
-Requirement already satisfied: parsel&gt;=1.5.0 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from Scrapy) (1.6.0)
-Requirement already satisfied: cryptography&gt;=2.0 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from Scrapy) (36.0.1)
+Requirement already satisfied: w3lib&gt;=1.17.0 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from Scrapy) (1.22.0)
+Requirement already satisfied: protego&gt;=0.1.15 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from Scrapy) (0.2.1)
+Requirement already satisfied: setuptools in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from Scrapy) (58.1.0)
+Requirement already satisfied: lxml&gt;=3.5.0 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from Scrapy) (4.8.0)
 Requirement already satisfied: cffi&gt;=1.12 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from cryptography&gt;=2.0-&gt;Scrapy) (1.15.0)
 Requirement already satisfied: jmespath&gt;=0.9.5 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from itemloaders&gt;=1.0.1-&gt;Scrapy) (0.10.0)
 Requirement already satisfied: six&gt;=1.6.0 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from parsel&gt;=1.5.0-&gt;Scrapy) (1.16.0)
-Requirement already satisfied: attrs&gt;=19.1.0 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from service-identity&gt;=16.0.0-&gt;Scrapy) (21.4.0)
 Requirement already satisfied: pyasn1 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from service-identity&gt;=16.0.0-&gt;Scrapy) (0.4.8)
+Requirement already satisfied: attrs&gt;=19.1.0 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from service-identity&gt;=16.0.0-&gt;Scrapy) (21.4.0)
 Requirement already satisfied: pyasn1-modules in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from service-identity&gt;=16.0.0-&gt;Scrapy) (0.2.8)
+Requirement already satisfied: Automat&gt;=0.8.0 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from Twisted&gt;=17.9.0-&gt;Scrapy) (20.2.0)
+Requirement already satisfied: incremental&gt;=21.3.0 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from Twisted&gt;=17.9.0-&gt;Scrapy) (21.3.0)
+Requirement already satisfied: typing-extensions&gt;=3.6.5 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from Twisted&gt;=17.9.0-&gt;Scrapy) (4.1.1)
 Requirement already satisfied: constantly&gt;=15.1 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from Twisted&gt;=17.9.0-&gt;Scrapy) (15.1.0)
 Requirement already satisfied: twisted-iocpsupport&lt;2,&gt;=1.0.2 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from Twisted&gt;=17.9.0-&gt;Scrapy) (1.0.2)
-Requirement already satisfied: typing-extensions&gt;=3.6.5 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from Twisted&gt;=17.9.0-&gt;Scrapy) (4.1.1)
-Requirement already satisfied: incremental&gt;=21.3.0 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from Twisted&gt;=17.9.0-&gt;Scrapy) (21.3.0)
 Requirement already satisfied: hyperlink&gt;=17.1.1 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from Twisted&gt;=17.9.0-&gt;Scrapy) (21.0.0)
-Requirement already satisfied: Automat&gt;=0.8.0 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from Twisted&gt;=17.9.0-&gt;Scrapy) (20.2.0)
+Requirement already satisfied: filelock&gt;=3.0.8 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from tldextract-&gt;Scrapy) (3.6.0)
 Requirement already satisfied: idna in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from tldextract-&gt;Scrapy) (3.3)
 Requirement already satisfied: requests&gt;=2.1.0 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from tldextract-&gt;Scrapy) (2.27.1)
-Requirement already satisfied: filelock&gt;=3.0.8 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from tldextract-&gt;Scrapy) (3.6.0)
 Requirement already satisfied: requests-file&gt;=1.4 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from tldextract-&gt;Scrapy) (1.5.1)
 Requirement already satisfied: pycparser in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from cffi&gt;=1.12-&gt;cryptography&gt;=2.0-&gt;Scrapy) (2.21)
 Requirement already satisfied: charset-normalizer~=2.0.0 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from requests&gt;=2.1.0-&gt;tldextract-&gt;Scrapy) (2.0.12)
-Requirement already satisfied: urllib3&lt;1.27,&gt;=1.21.1 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from requests&gt;=2.1.0-&gt;tldextract-&gt;Scrapy) (1.26.8)
 Requirement already satisfied: certifi&gt;=2017.4.17 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from requests&gt;=2.1.0-&gt;tldextract-&gt;Scrapy) (2021.10.8)
+Requirement already satisfied: urllib3&lt;1.27,&gt;=1.21.1 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from requests&gt;=2.1.0-&gt;tldextract-&gt;Scrapy) (1.26.8)
 Note: you may need to restart the kernel to use updated packages.
 </pre></div>
 </div>
@@ -706,9 +706,9 @@ You should consider upgrading via the &#39;C:\Users\ASUS A456UR\AppData\Local\Pr
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: nltk in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (3.7)
 Requirement already satisfied: click in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from nltk) (8.0.4)
-Requirement already satisfied: joblib in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from nltk) (1.1.0)
 Requirement already satisfied: regex&gt;=2021.8.3 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from nltk) (2022.3.15)
 Requirement already satisfied: tqdm in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from nltk) (4.63.0)
+Requirement already satisfied: joblib in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from nltk) (1.1.0)
 Requirement already satisfied: colorama in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from click-&gt;nltk) (0.4.4)
 Note: you may need to restart the kernel to use updated packages.
 </pre></div>
@@ -789,17 +789,18 @@ You should consider upgrading via the &#39;C:\Users\ASUS A456UR\AppData\Local\Pr
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: nltk in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (3.7)
-Requirement already satisfied: tqdm in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from nltk) (4.63.0)
-Requirement already satisfied: joblib in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from nltk) (1.1.0)
-Requirement already satisfied: click in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from nltk) (8.0.4)
-Requirement already satisfied: regex&gt;=2021.8.3 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from nltk) (2022.3.15)
-Requirement already satisfied: colorama in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from click-&gt;nltk) (0.4.4)
-Note: you may need to restart the kernel to use updated packages.
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: nltk in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (3.7)Note: you may need to restart the kernel to use updated packages.
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING: You are using pip version 22.0.4; however, version 22.1.2 is available.
 You should consider upgrading via the &#39;C:\Users\ASUS A456UR\AppData\Local\Programs\Python\Python310\python.exe -m pip install --upgrade pip&#39; command.
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: click in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from nltk) (8.0.4)
+Requirement already satisfied: tqdm in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from nltk) (4.63.0)
+Requirement already satisfied: joblib in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from nltk) (1.1.0)
+Requirement already satisfied: regex&gt;=2021.8.3 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from nltk) (2022.3.15)
+Requirement already satisfied: colorama in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from click-&gt;nltk) (0.4.4)
 </pre></div>
 </div>
 </div>
@@ -812,9 +813,9 @@ You should consider upgrading via the &#39;C:\Users\ASUS A456UR\AppData\Local\Pr
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: scikit-learn in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (1.1.1)
-Requirement already satisfied: threadpoolctl&gt;=2.0.0 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from scikit-learn) (3.1.0)
-Requirement already satisfied: numpy&gt;=1.17.3 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from scikit-learn) (1.22.3)
 Requirement already satisfied: scipy&gt;=1.3.2 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from scikit-learn) (1.8.0)
+Requirement already satisfied: numpy&gt;=1.17.3 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from scikit-learn) (1.22.3)
+Requirement already satisfied: threadpoolctl&gt;=2.0.0 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from scikit-learn) (3.1.0)
 Requirement already satisfied: joblib&gt;=1.0.0 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from scikit-learn) (1.1.0)
 Note: you may need to restart the kernel to use updated packages.
 </pre></div>
@@ -1004,16 +1005,17 @@ Untuk menggunakan Tf-IDF pada python kita bisa menggunakan TfidfVectorizer dari 
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: scikit-learn in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (1.1.1)
-Requirement already satisfied: scipy&gt;=1.3.2 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from scikit-learn) (1.8.0)
-Requirement already satisfied: joblib&gt;=1.0.0 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from scikit-learn) (1.1.0)
-Requirement already satisfied: numpy&gt;=1.17.3 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from scikit-learn) (1.22.3)
-Requirement already satisfied: threadpoolctl&gt;=2.0.0 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from scikit-learn) (3.1.0)
-Note: you may need to restart the kernel to use updated packages.
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: scikit-learn in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (1.1.1)Note: you may need to restart the kernel to use updated packages.
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING: You are using pip version 22.0.4; however, version 22.1.2 is available.
 You should consider upgrading via the &#39;C:\Users\ASUS A456UR\AppData\Local\Programs\Python\Python310\python.exe -m pip install --upgrade pip&#39; command.
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: scipy&gt;=1.3.2 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from scikit-learn) (1.8.0)
+Requirement already satisfied: threadpoolctl&gt;=2.0.0 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from scikit-learn) (3.1.0)
+Requirement already satisfied: numpy&gt;=1.17.3 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from scikit-learn) (1.22.3)
+Requirement already satisfied: joblib&gt;=1.0.0 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from scikit-learn) (1.1.0)
 </pre></div>
 </div>
 </div>
@@ -1043,17 +1045,17 @@ You should consider upgrading via the &#39;C:\Users\ASUS A456UR\AppData\Local\Pr
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: seaborn in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (0.11.2)
-Requirement already satisfied: pandas&gt;=0.23 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from seaborn) (1.4.1)
 Requirement already satisfied: matplotlib&gt;=2.2 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from seaborn) (3.5.2)
 Requirement already satisfied: scipy&gt;=1.0 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from seaborn) (1.8.0)
+Requirement already satisfied: pandas&gt;=0.23 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from seaborn) (1.4.1)
 Requirement already satisfied: numpy&gt;=1.15 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from seaborn) (1.22.3)
-Requirement already satisfied: packaging&gt;=20.0 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from matplotlib&gt;=2.2-&gt;seaborn) (21.3)
-Requirement already satisfied: fonttools&gt;=4.22.0 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from matplotlib&gt;=2.2-&gt;seaborn) (4.31.2)
+Requirement already satisfied: pillow&gt;=6.2.0 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from matplotlib&gt;=2.2-&gt;seaborn) (9.0.1)
 Requirement already satisfied: pyparsing&gt;=2.2.1 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from matplotlib&gt;=2.2-&gt;seaborn) (3.0.7)
 Requirement already satisfied: cycler&gt;=0.10 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from matplotlib&gt;=2.2-&gt;seaborn) (0.11.0)
+Requirement already satisfied: packaging&gt;=20.0 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from matplotlib&gt;=2.2-&gt;seaborn) (21.3)
+Requirement already satisfied: fonttools&gt;=4.22.0 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from matplotlib&gt;=2.2-&gt;seaborn) (4.31.2)
 Requirement already satisfied: kiwisolver&gt;=1.0.1 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from matplotlib&gt;=2.2-&gt;seaborn) (1.4.2)
 Requirement already satisfied: python-dateutil&gt;=2.7 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from matplotlib&gt;=2.2-&gt;seaborn) (2.8.2)
-Requirement already satisfied: pillow&gt;=6.2.0 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from matplotlib&gt;=2.2-&gt;seaborn) (9.0.1)
 Requirement already satisfied: pytz&gt;=2020.1 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from pandas&gt;=0.23-&gt;seaborn) (2021.3)
 Requirement already satisfied: six&gt;=1.5 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from python-dateutil&gt;=2.7-&gt;matplotlib&gt;=2.2-&gt;seaborn) (1.16.0)
 Note: you may need to restart the kernel to use updated packages.
@@ -1073,20 +1075,22 @@ You should consider upgrading via the &#39;C:\Users\ASUS A456UR\AppData\Local\Pr
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: matplotlib in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (3.5.2)
-Requirement already satisfied: kiwisolver&gt;=1.0.1 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from matplotlib) (1.4.2)
-Requirement already satisfied: fonttools&gt;=4.22.0 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from matplotlib) (4.31.2)
-Requirement already satisfied: cycler&gt;=0.10 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from matplotlib) (0.11.0)
-Requirement already satisfied: pillow&gt;=6.2.0 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from matplotlib) (9.0.1)
-Requirement already satisfied: python-dateutil&gt;=2.7 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from matplotlib) (2.8.2)
-Requirement already satisfied: pyparsing&gt;=2.2.1 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from matplotlib) (3.0.7)
-Requirement already satisfied: packaging&gt;=20.0 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from matplotlib) (21.3)
 Requirement already satisfied: numpy&gt;=1.17 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from matplotlib) (1.22.3)
-Requirement already satisfied: six&gt;=1.5 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from python-dateutil&gt;=2.7-&gt;matplotlib) (1.16.0)
+Requirement already satisfied: python-dateutil&gt;=2.7 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from matplotlib) (2.8.2)
 Note: you may need to restart the kernel to use updated packages.
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING: You are using pip version 22.0.4; however, version 22.1.2 is available.
 You should consider upgrading via the &#39;C:\Users\ASUS A456UR\AppData\Local\Programs\Python\Python310\python.exe -m pip install --upgrade pip&#39; command.
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: pillow&gt;=6.2.0 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from matplotlib) (9.0.1)
+Requirement already satisfied: kiwisolver&gt;=1.0.1 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from matplotlib) (1.4.2)
+Requirement already satisfied: packaging&gt;=20.0 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from matplotlib) (21.3)
+Requirement already satisfied: cycler&gt;=0.10 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from matplotlib) (0.11.0)
+Requirement already satisfied: pyparsing&gt;=2.2.1 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from matplotlib) (3.0.7)
+Requirement already satisfied: fonttools&gt;=4.22.0 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from matplotlib) (4.31.2)
+Requirement already satisfied: six&gt;=1.5 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from python-dateutil&gt;=2.7-&gt;matplotlib) (1.16.0)
 </pre></div>
 </div>
 </div>
@@ -1107,6 +1111,31 @@ You should consider upgrading via the &#39;C:\Users\ASUS A456UR\AppData\Local\Pr
 </div>
 </div>
 </section>
+<section id="reduksi-dimensi">
+<h2>Reduksi Dimensi<a class="headerlink" href="#reduksi-dimensi" title="Permalink to this headline">#</a></h2>
+<p>Sebelum masuk ke metode KMeans kita perlu mereduksi dimensi dahulu, untuk melakukan reduksi dimensi kita bisa menggunakan teknik Principal Component Analysis (PCA), dimana PCA akan mengurangi dimensi kumpulan data menjadi angka arbitrary sambil mempertahankan informasi yang ada pada data. Sederhananya PCA akan cenderung mempertahankan dimensi yang paling baik, dengan menghapus dimensi yang kontribusinya sedikit pada dimensi terakhir</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pca</span> <span class="o">=</span> <span class="n">PCA</span><span class="p">(</span><span class="n">n_components</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+<span class="n">pca_vecs</span> <span class="o">=</span> <span class="n">pca</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">dfp</span><span class="p">)</span>
+<span class="n">x0</span> <span class="o">=</span> <span class="n">pca_vecs</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span>
+<span class="n">x1</span> <span class="o">=</span> <span class="n">pca_vecs</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x0</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[-0.13803762 -0.04017673 -0.02717337 ...  0.07948205  0.17976846
+  0.1038171 ]
+[ 0.11984344 -0.0727122  -0.0881781  ... -0.07632471 -0.05851265
+ -0.00273118]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Pada code di atas pertama kita inisalisasi PCA dahulu dengan 2 komponen, kemudian set PCA dengan vector dari tfidf dan disimpan vector yang direduksi pada variabel pca_vecs. Kemudian simpan 2 dimensi tadi kepada variabel x0 dan x1. elanjutnya kita tambahkan kolom cluster, x0, dan x1 pada dataframe jurnal kita</p>
+</section>
 <section id="menentukan-nilai-k-terbaik-dengan-metode-elbow">
 <h2>Menentukan Nilai K Terbaik Dengan Metode Elbow<a class="headerlink" href="#menentukan-nilai-k-terbaik-dengan-metode-elbow" title="Permalink to this headline">#</a></h2>
 <p>Langkah awal untuk memulai KMeans adalah dengan menentukan berapa banyak cluster yang mau ditentukan, untuk mencari cluster berapa banyak cluster yang tepat bisa menggunakan metode elbow. Metode Elbow sendiri merupakan salah satu metode untuk menentukan jumlah cluster yang tepat pada K-Means melalui persentase hasil perbandingan antara jumlah cluster yang akan membentuk siku siku pada suatu titik cluster yang tepat. Untuk mencari Elbow bisa menggunakan looping dengan ketentuan cluster pada insialisasi KMeans bernilai iterasi loopingnya, berikut adalah code dan visualisasi elbownya</p>
@@ -1116,21 +1145,8 @@ You should consider upgrading via the &#39;C:\Users\ASUS A456UR\AppData\Local\Pr
 <span class="n">K</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span>
 <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">K</span><span class="p">:</span>
     <span class="n">kmeanModel</span> <span class="o">=</span> <span class="n">KMeans</span><span class="p">(</span><span class="n">n_clusters</span><span class="o">=</span><span class="n">k</span><span class="p">)</span>
-    <span class="n">kmeanModel</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">df_pca</span><span class="p">)</span>
+    <span class="n">kmeanModel</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">pca_vecs</span><span class="p">)</span>
     <span class="n">distortions</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">kmeanModel</span><span class="o">.</span><span class="n">inertia_</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="nn">Input In [19],</span> in <span class="ni">&lt;cell line: 3&gt;</span><span class="nt">()</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">K</span><span class="p">:</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span>     <span class="n">kmeanModel</span> <span class="o">=</span> <span class="n">KMeans</span><span class="p">(</span><span class="n">n_clusters</span><span class="o">=</span><span class="n">k</span><span class="p">)</span>
-<span class="ne">----&gt; </span><span class="mi">5</span>     <span class="n">kmeanModel</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">df_pca</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">6</span>     <span class="n">distortions</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">kmeanModel</span><span class="o">.</span><span class="n">inertia_</span><span class="p">)</span>
-
-<span class="ne">NameError</span>: name &#39;df_pca&#39; is not defined
 </pre></div>
 </div>
 </div>
@@ -1147,7 +1163,7 @@ You should consider upgrading via the &#39;C:\Users\ASUS A456UR\AppData\Local\Pr
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/UAS_55_0.png" src="_images/UAS_55_0.png" />
+<img alt="_images/UAS_59_0.png" src="_images/UAS_59_0.png" />
 </div>
 </div>
 <p>Dapat dilihat bahwa K yang membentuk siku adalah K yang kelima maka nanti pada implementasi K-Means akan menggunakan 5 cluster</p>
@@ -1166,30 +1182,9 @@ You should consider upgrading via the &#39;C:\Users\ASUS A456UR\AppData\Local\Pr
 </div>
 </div>
 </section>
-<section id="reduksi-dimensi">
-<h2>Reduksi Dimensi<a class="headerlink" href="#reduksi-dimensi" title="Permalink to this headline">#</a></h2>
-<p>Untuk melakukan reduksi dimensi kita bisa menggunakan teknik Principal Component Analysis (PCA), dimana PCA akan mengurangi dimensi kumpulan data menjadi angka arbitrary sambil mempertahankan informasi yang ada pada data. Sederhananya PCA akan cenderung mempertahankan dimensi yang paling baik, dengan menghapus dimensi yang kontribusinya sedikit pada dimensi terakhir</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pca</span> <span class="o">=</span> <span class="n">PCA</span><span class="p">(</span><span class="n">n_components</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
-<span class="n">pca_vecs</span> <span class="o">=</span> <span class="n">pca</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">vect_text</span><span class="o">.</span><span class="n">toarray</span><span class="p">())</span>
-<span class="n">x0</span> <span class="o">=</span> <span class="n">pca_vecs</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span>
-<span class="n">x1</span> <span class="o">=</span> <span class="n">pca_vecs</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">]</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">x0</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">x1</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[ 0.1154748  -0.03010483 -0.03827888 ... -0.1367186  -0.15530668
- -0.14450373]
-[ 0.0473269   0.11785696  0.09614429 ... -0.07814701 -0.11722571
- -0.08843261]
-</pre></div>
-</div>
-</div>
-</div>
-<p>Pada code di atas pertama kita inisalisasi PCA dahulu dengan 2 komponen, kemudian set PCA dengan vector dari tfidf dan disimpan vector yang direduksi pada variabel pca_vecs. Kemudian simpan 2 dimensi tadi kepada variabel x0 dan x1. elanjutnya kita tambahkan kolom cluster, x0, dan x1 pada dataframe jurnal kita</p>
+<section id="labeling-cluster">
+<h2>Labeling Cluster<a class="headerlink" href="#labeling-cluster" title="Permalink to this headline">#</a></h2>
+<p>Sebelum melakukan labeling, pertama kita tambahkan dahulu kolom cluster dan hasil reduksi dimensi yang telah dilakukan</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">jurnal</span><span class="p">[</span><span class="s1">&#39;cluster&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">clusters</span>
@@ -1229,45 +1224,42 @@ You should consider upgrading via the &#39;C:\Users\ASUS A456UR\AppData\Local\Pr
       <th>0</th>
       <td>Abstrak\r\nPenelitian ini menggunakan metode k...</td>
       <td>4</td>
-      <td>0.115475</td>
-      <td>0.047327</td>
+      <td>-0.138038</td>
+      <td>0.119843</td>
     </tr>
     <tr>
       <th>1</th>
       <td>Aplikasi nyata pemanfaatan teknologi informasi...</td>
       <td>3</td>
-      <td>-0.030105</td>
-      <td>0.117857</td>
+      <td>-0.040177</td>
+      <td>-0.072712</td>
     </tr>
     <tr>
       <th>2</th>
       <td>Tujuan penelitian ini adalah untuk mengidentif...</td>
       <td>3</td>
-      <td>-0.038279</td>
-      <td>0.096144</td>
+      <td>-0.027173</td>
+      <td>-0.088178</td>
     </tr>
     <tr>
       <th>3</th>
       <td>PLN merupakan Badan Usaha Milik Negara yang be...</td>
       <td>4</td>
-      <td>0.163460</td>
-      <td>-0.013736</td>
+      <td>-0.107665</td>
+      <td>0.057330</td>
     </tr>
     <tr>
       <th>4</th>
       <td>\r\n\r\nPenelitian ini bertujuan untuk mengeta...</td>
       <td>4</td>
-      <td>0.120576</td>
-      <td>0.024087</td>
+      <td>-0.077588</td>
+      <td>0.030956</td>
     </tr>
   </tbody>
 </table>
 </div></div></div>
 </div>
-</section>
-<section id="labeling-cluster">
-<h2>Labeling Cluster<a class="headerlink" href="#labeling-cluster" title="Permalink to this headline">#</a></h2>
-<p>Untuk melakukan labeling cluster, bisa menggunakan logika mapping dan nilai value disini kita cocokan saja dengan nilai keynya</p>
+<p>Kemudian kita bisa melabeling dengan menggunakan logika mapping dan nilai value disini kita cocokan saja dengan nilai keynya</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cluster_map</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">:</span><span class="mi">5</span><span class="p">}</span>
@@ -1306,36 +1298,36 @@ You should consider upgrading via the &#39;C:\Users\ASUS A456UR\AppData\Local\Pr
       <th>0</th>
       <td>Abstrak\r\nPenelitian ini menggunakan metode k...</td>
       <td>4</td>
-      <td>0.115475</td>
-      <td>0.047327</td>
+      <td>-0.138038</td>
+      <td>0.119843</td>
     </tr>
     <tr>
       <th>1</th>
       <td>Aplikasi nyata pemanfaatan teknologi informasi...</td>
       <td>3</td>
-      <td>-0.030105</td>
-      <td>0.117857</td>
+      <td>-0.040177</td>
+      <td>-0.072712</td>
     </tr>
     <tr>
       <th>2</th>
       <td>Tujuan penelitian ini adalah untuk mengidentif...</td>
       <td>3</td>
-      <td>-0.038279</td>
-      <td>0.096144</td>
+      <td>-0.027173</td>
+      <td>-0.088178</td>
     </tr>
     <tr>
       <th>3</th>
       <td>PLN merupakan Badan Usaha Milik Negara yang be...</td>
       <td>4</td>
-      <td>0.163460</td>
-      <td>-0.013736</td>
+      <td>-0.107665</td>
+      <td>0.057330</td>
     </tr>
     <tr>
       <th>4</th>
       <td>\r\n\r\nPenelitian ini bertujuan untuk mengeta...</td>
       <td>4</td>
-      <td>0.120576</td>
-      <td>0.024087</td>
+      <td>-0.077588</td>
+      <td>0.030956</td>
     </tr>
   </tbody>
 </table>
@@ -1357,7 +1349,7 @@ You should consider upgrading via the &#39;C:\Users\ASUS A456UR\AppData\Local\Pr
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/UAS_70_0.png" src="_images/UAS_70_0.png" />
+<img alt="_images/UAS_71_0.png" src="_images/UAS_71_0.png" />
 </div>
 </div>
 <p>Dapat dilihat bahwa sistem mendeteksi 5 kelompok yang berbeda yang didapatkan dari kolom cluster pada data</p>
@@ -1376,10 +1368,10 @@ You should consider upgrading via the &#39;C:\Users\ASUS A456UR\AppData\Local\Pr
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: scikit-learn in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (1.1.1)
+Requirement already satisfied: scipy&gt;=1.3.2 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from scikit-learn) (1.8.0)
+Requirement already satisfied: threadpoolctl&gt;=2.0.0 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from scikit-learn) (3.1.0)
 Requirement already satisfied: joblib&gt;=1.0.0 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from scikit-learn) (1.1.0)
 Requirement already satisfied: numpy&gt;=1.17.3 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from scikit-learn) (1.22.3)
-Requirement already satisfied: threadpoolctl&gt;=2.0.0 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from scikit-learn) (3.1.0)
-Requirement already satisfied: scipy&gt;=1.3.2 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from scikit-learn) (1.8.0)
 Note: you may need to restart the kernel to use updated packages.
 </pre></div>
 </div>
@@ -1536,7 +1528,10 @@ Topic  3  :  -0.35247924376917145
 Topic  4  :  -19.461964989913266
 Topic  5  :  -3.6659787297103037
 Topic  6  :  -12.097287139063875
-Topic  7  :  26.34857694567326
+Topic  
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>7  :  26.34857694567326
 Topic  8  :  -13.223869709653293
 Topic  9  :  2.470223052033785
 </pre></div>
@@ -1592,7 +1587,10 @@ Topic  9  :  2.470223052033785
 kerja karyawan kinerja variabel berpengaruh nilai signifikan perusahaan penelitian positif 
 
 Topic 1: 
-perusahaan Ratio saham Return Bursa Efek Perusahaan Equity Indonesia to 
+perusahaan Ratio saham Return
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Bursa Efek Perusahaan Equity Indonesia to 
 
 Topic 2: 
 keputusan pembelian produk merek konsumen kualitas uji variabel promosi Keputusan 
